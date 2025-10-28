@@ -1,0 +1,39 @@
+/*
+ * Autor: Alberto Mancera Plaza
+ * Objetivo: Crear la clase Lanchas
+ * Fecha: 23/05/20025
+ */
+package examen;
+
+import java.time.LocalDate;
+
+public class Lanchas extends Embarcacion{
+	
+	public static final int POTENCIA_DEFECTO = 80;
+	//Atributos de objeto
+	private int potencia_motor;
+	
+
+	public Lanchas(String matricula, LocalDate fecha_construccion, int eslora, int num_pasajeros, boolean base_puerto,
+			int potencia_motor) throws IllegalArgumentException {
+		super(matricula, fecha_construccion, eslora, num_pasajeros, base_puerto);
+		this.potencia_motor = potencia_motor;
+	}
+
+	public Lanchas() {
+		this(MATRICULA_DEFECTO, FECHA_ACTUAL, POTENCIA_DEFECTO, POTENCIA_DEFECTO, BASE_PUERTO_DEFECTO, POTENCIA_DEFECTO);
+	}
+
+	public int getPotencia_motor() {
+		return potencia_motor;
+	}
+
+	@Override
+	public String toString() {
+		return "Lanchas [potencia_motor=" + potencia_motor + "]" + super.toString();
+	}
+	
+	
+	
+	
+}

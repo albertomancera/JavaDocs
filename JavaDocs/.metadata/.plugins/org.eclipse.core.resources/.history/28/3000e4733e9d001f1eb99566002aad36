@@ -1,0 +1,21 @@
+package metodos;
+
+
+public class Metodos {
+	public static void main (String [] args) {
+	
+		
+		int nota;
+		
+		nota = notaAleatoria();
+		System.out.println(nota);
+	}
+	//Devuelve una nota entre 0 y 10
+	public static int notaAleatoria(int intervalo) {
+		int nota;
+		nota = (int) Math.ceil(Math.random()*intervalo);
+		return nota;
+	}
+	
+	
+}

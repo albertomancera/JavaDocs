@@ -1,0 +1,21 @@
+package bucles;
+import java.util.*;
+
+public class Bucles {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+	/*
+	 * Bucles indeterminados: no sabemos cuantas lineas vamos a hacer
+	 * 	-While ( mientras)
+	 * 		
+	 * 		
+	 * 	-Do-while
+	 * Bucles determinados: sabemos cuantas veces los vamos a hacer
+	 */
+	
+		String clave="Juan";
+		String pass="";
+		
+		
+	}
+}

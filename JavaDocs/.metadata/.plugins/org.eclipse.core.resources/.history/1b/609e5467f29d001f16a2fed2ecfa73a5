@@ -1,0 +1,15 @@
+package metodos;
+import java.util.Scanner;
+
+public class Ejemplo2 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+
+	}
+	//Comprobar si es multiplo de 5
+	public static int multiplo (int cinco) {
+		int num; 
+		num = (cinco%5  ==0)
+		
+	}
+}

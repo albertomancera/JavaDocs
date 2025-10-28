@@ -1,0 +1,13 @@
+package examenT1;
+
+public class Pluviametria {
+
+	public static void main(String[] args) {
+		//Lista de municipios
+		String[] municipios = {
+				  "MIJAS", "JUBRIQUE", "PUJERRA", "OJEN", "MÁLAGA",
+		            "RONDA", "COÍN", "TORROX", "ARDALES", "MARBELLA"
+		        };
+	}
+
+}

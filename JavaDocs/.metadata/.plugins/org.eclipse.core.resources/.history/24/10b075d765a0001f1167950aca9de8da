@@ -1,0 +1,21 @@
+package ejercicio9;
+import java.util.Scanner;
+
+public class Ejercicio9 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+	}
+	public static int minimo (int num1,int num2) {
+		int min;
+		
+		if (num1<num2) {
+			min = num1;
+		}else if (num2<num1) {
+			min = num2;
+		}else {
+			min = 0;
+		}
+		return min;
+	}
+}

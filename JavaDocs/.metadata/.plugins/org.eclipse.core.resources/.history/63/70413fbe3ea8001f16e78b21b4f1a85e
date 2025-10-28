@@ -1,0 +1,31 @@
+package ejercicio1;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+
+		int []numaleatorio = new int [30];
+		
+		for(int i=0;i<numaleatorio.length; i++ ) {
+			numaleatorio[i]=((int) Math.random()*100);
+		}
+		
+		System.out.println("El mayor número es: "+ esMayor(numaleatorio));
+		
+	}
+	//El mayor de los números
+	public static int esMayor(int []numaleatorio) {
+		int mayor=0;
+		
+		for(int i=0;i<numaleatorio.length;i++) {
+			if (mayor>numaleatorio[i]);
+			mayor=numaleatorio[i];
+			
+		}
+		return mayor;
+		
+	}
+	//La suma de los números pares
+	
+	//Decir si esta entre los 30 numeros
+
+}

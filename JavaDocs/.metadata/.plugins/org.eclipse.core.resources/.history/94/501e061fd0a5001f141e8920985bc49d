@@ -1,0 +1,66 @@
+/*
+ * Objetivo: crear una tabla de futbol, columna 1 el nº de goles y columna 2 el numeros aleatorios del 0 al 5
+ * Autor: Carlos Rueda Márquez
+ * Fecha: 18/11/2024
+ */
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		//Solitar los datos para las apuestas
+		Scanner teclado = new Scanner (System.in);
+		
+		//Indicar el numero de filas y columnas para nuestra tabla
+		final int NUMERO_FILAS = 5;
+		final int EQUIPO_COLUMNAS = 1;
+		
+		int [][] partido = new int [NUMERO_FILAS][EQUIPO_COLUMNAS];
+		int [] goles = new int [NUMERO_FILAS];
+		
+		// Tipo de Apuestas
+		int uno, dos;
+		String x;
+		
+		//funciona pero podrias poner un array tipo char
+		
+		//Solicitar apuestas de los 5 partidos, for tiene que ser string para la X - empate
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Apuesta para el partido número " + + (i + 1) + " (1. Gana el equipo local, X. "
+					+ "empate y 2. gana el equipo visitante)");
+			goles[i] = teclado.nextInt();
+		}
+		
+		//Se muestra el numero de filas
+		for (int i = 0; i < NUMERO_FILAS; i++) {
+
+			//Este bucle permite hacer los numeros aleatorios de 0 y 5 de los goles
+			for (int y = 0; y < EQUIPO_COLUMNAS; y++) {
+				partido[i][y] = (int) (Math.random() * 5);
+			}
+			
+		}
+		/* ESTO NO TE LO PIDE EL EJERCICIO
+		//Tabla del partido
+		for (int i = 0; i < NUMERO_FILAS; i++) {
+			System.out.print("Partido " + (i + 1) + ": \t");
+			
+			//Columnas de los goles en numeros aleatorios - locales
+			for (int y = 0; y < EQUIPO_COLUMNAS; y++) {
+				System.out.print("Números de goles locales " + partido[i][y] + "\t");
+			}
+			
+			//Columnas de los goles en numeros aleatorios - visitantes
+			for (int z = 0; z < EQUIPO_COLUMNAS; z++) {
+				System.out.print("Números de goles visitantes " + partido[i][z]);
+			}
+			*/
+			System.out.println();
+			
+			//Mensaje que nos indica cuantas veces hemos fallado o adivinado en la apuesta
+			System.out.println();
+		}
+		
+	}
+}

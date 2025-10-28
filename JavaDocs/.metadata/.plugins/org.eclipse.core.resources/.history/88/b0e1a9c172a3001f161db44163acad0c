@@ -1,0 +1,17 @@
+package ejercicio11;
+
+import java.util.Scanner;
+
+public class Ejercicio11 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		int num;
+		System.out.println("Dime un número enteroo: ");
+
+	}
+	//
+	public static void tablaMultiplicar(int num) {
+		
+	}
+}

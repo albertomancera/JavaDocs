@@ -1,0 +1,9 @@
+package mobiliario;
+
+public abstract class Mueble {
+
+	protected final int identificador = 0;
+	protected final double precio;
+	protected String descripcion;
+	
+}

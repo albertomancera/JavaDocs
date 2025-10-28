@@ -1,0 +1,18 @@
+package mobiliario;
+
+public class Silla extends Asiento {
+	public static final int MIN_POSICION = 1;
+	public static final int MAX_POSICION = 4;
+
+
+	private int posicionRespaldo;
+
+
+	public Silla(double precio, String descripcion, int numAsientos, String tapiceria, String color,
+			int posicionRespaldo) throws IllegalArgumentException {
+		super(precio, descripcion, Asiento.MIN_PLAZAS, tapiceria, color);
+		this.posicionRespaldo = MIN_POSICION;
+	}
+	
+	
+}

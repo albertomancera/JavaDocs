@@ -1,0 +1,25 @@
+package ejercicio;
+
+import java.util.Scanner;
+
+public class Ejercicio2  {
+/*
+ * Realizar un porgrma que muestre en pantalla palabras que sean ingresadas por teclado hasta que se ingrese la palabra "salir"
+ */
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		
+		String palabras;
+
+		
+		do {
+			System.out.println("Dime una palabra:");
+			palabras = sc.nextLine();
+			
+			System.out.println("Dime otra palabra:");
+			palabras = sc.nextLine();
+		}while (!palabras.equals("salir"));
+		System.out.println("Has introducido la palabra salir.");
+	}
+
+}

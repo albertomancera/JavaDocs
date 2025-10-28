@@ -1,0 +1,19 @@
+package examen;
+
+import java.time.LocalDate;
+
+public class Lanchas extends Embarcacion{
+	//Atributos de objeto
+	private int potencia_motor;
+	
+
+	public Lanchas(String matricula, LocalDate fecha_construccion, int eslora, int num_pasajeros, boolean base_puerto,
+			int potencia_motor) throws IllegalArgumentException {
+		super(matricula, fecha_construccion, eslora, num_pasajeros, base_puerto);
+		this.potencia_motor = potencia_motor;
+	}
+	
+
+	
+	
+}

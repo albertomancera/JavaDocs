@@ -1,0 +1,17 @@
+package ejercicio;
+import java.util.Scanner;
+
+public class EjercicioMatriz {
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		
+	double notas [][]= new double [4][3];
+	//cargar datos
+	for(int i=0;i<notas.length;i++) {
+	for(int j=0;j<notas[0].length;j++) {
+		System.out.println("Ingrese las notas del alumno: "+i);
+		notas[i][j]= sc.nextInt();
+	}
+	}
+	}
+}

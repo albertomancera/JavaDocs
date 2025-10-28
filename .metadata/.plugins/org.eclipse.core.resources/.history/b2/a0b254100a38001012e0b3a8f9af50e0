@@ -1,0 +1,118 @@
+package examen;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+
+
+public class PrincipalExamen {
+
+	public static void main(String[] args) {
+		ArrayList<Embarcacion>lista = new ArrayList<>();
+		/*1. Importa desde documentos de texto (diseñados por ti)
+		al menos tres embarcaciones de cada tipo.*/
+		File f1 = new File("velero1.txt");
+		
+		
+		//2. Genera 10 veleros con valores por defecto con fecha de construcción cuyo año sea un
+		//valor aleatorio entre 2000 y 2050.
+		System.out.println("2");
+		Velero[] veleros = new Velero[10];
+		for(int i = 0; i<veleros.length; i++) {
+			try {
+				veleros[i] = new Velero(Embarcacion.MATRICULA_DEFECTO,Embarcacion.FECHA_ACTUAL,Embarcacion.ESLORA_DEFECTO,
+						Embarcacion.NUM_PASAJEROS_DEFECTO,Embarcacion.BASE_PUERTO_DEFECTO,Velero.NUM_MASTILES_DEFECTO );
+				System.out.println(veleros[i]);
+				lista.add(veleros[i]);
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	
+	
+	//3. Genera 10 yates con valores por defecto cuya eslora sea un valor aleatorio entre 10 y 80
+	System.out.println("3");
+	Yates[] yates = new Yates[10];
+	for(int i = 0; i<yates.length; i++) {
+		try {
+			yates[i] = new Yates(Embarcacion.MATRICULA_DEFECTO,Embarcacion.FECHA_ACTUAL,obtenerNumeroAleatorio(),
+					Embarcacion.NUM_PASAJEROS_DEFECTO,Embarcacion.BASE_PUERTO_DEFECTO);
+			System.out.println(yates[i]);
+			lista.add(yates[i]);
+	}catch(IllegalArgumentException e) {
+		System.out.println(e.getMessage());
+	}
+	}
+	
+	//4.Genera 3 lanchas con valores por defecto
+	System.out.println("4");
+	Lanchas[] lanchas = new Lanchas[3];
+	for(int i = 0; i<lanchas.length; i++) {
+		try {
+			lanchas[i] = new Lanchas();
+			System.out.println(lanchas[i]);
+			lista.add(lanchas[i]);
+		}catch(IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	//5. Ordena las embarcaciones por eslora.
+	System.out.println("5");
+	Collections.sort(lista,Comparator.comparing(Embarcacion :: getEslora));
+	for (Embarcacion embarcaciones : lista) {
+		System.out.println(embarcaciones);
+	}
+	System.out.println("El numero total de embarcaciones es: "+ lista.size());
+	
+	//7. Solicita una matrícula y muestra la información de la embarcación. La búsqueda debe ser
+	//lo más e�ciente posible. En el caso de que no exista, debe indicarlo.
+	System.out.println("7");
+	Yates yate2 = new Yates("EEE22",Embarcacion.FECHA_ACTUAL,Embarcacion.ESLORA_DEFECTO,Embarcacion.NUM_PASAJEROS_DEFECTO,Embarcacion.BASE_PUERTO_DEFECTO);
+	lista.add(yate2);
+	try {
+		System.out.println(buscarMatricula(lista, "EEE2"));
+	}catch(IllegalArgumentException  e) {
+		System.out.println("Esta mátricula no existe");
+	}
+	
+	//8. Elimina todos los mega yates con una eslora superior a 70.
+	System.out.println("8");
+	
+	
+	
+	
+	
+	}
+	public static int obtenerNumeroAleatorio() {
+		 int min = 10;
+	        int max = 80;
+	        int numeroAleatorio = (int) (Math.random() * (max - min + 1)) + min;
+		return numeroAleatorio;
+    }
+	
+	
+	private static Embarcacion buscarMatricula (List<Embarcacion> l, String matricula) throws IllegalArgumentException {
+		Embarcacion al = null;
+		Iterator<Embarcacion> itrEmbarcacion = l.iterator();
+		while(itrEmbarcacion.hasNext())  {
+			Embarcacion embarcacion = itrEmbarcacion.next();
+			if(embarcacion.getMatricula().equalsIgnoreCase(matricula))  {
+				al = embarcacion;
+			}else {
+				throw new IllegalArgumentException("Esta Matrícula no existe");
+			}
+		}
+		
+		return al;
+	}
+}
+

@@ -1,0 +1,28 @@
+
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public class Barco extends Acuatico {
+
+    private boolean tieneMotor;
+    
+
+	public Barco(String matricula, String modelo, LocalDate fechaFabricacion, double eslora, boolean tieneMotor) {
+		super(matricula, modelo, fechaFabricacion, eslora);
+		this.tieneMotor = tieneMotor;
+	}
+
+	public double precioAlquiler(int numDias) {
+		double precio = numDias * 200;
+		if(tieneMotor == true) {
+			 precio = numDias * 200 + 50;
+		}
+    	return precio;
+    }
+	
+	public String toString() {
+        return String.format("Barco [Matrícula: " + matricula + ", Modelo: " + modelo + ", Eslora: " + eslora + "m, Tiene Motor: " + tieneMotor + "]");
+    }
+
+}

@@ -1,0 +1,25 @@
+package ejercicio1;
+import java.util.Scanner;
+
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		int anno;
+		String siglo;
+		
+		
+		do {
+			System.out.println("Introduzca un año (entre 1801-2100)");
+			anno = entradaTeclado.nextInt();
+			
+		}while(anno >=1801 && anno<=2100);
+		switch (anno) {
+			case 1800:
+				siglo= "XIX";
+			break;
+				
+		}
+	}
+}

@@ -1,0 +1,27 @@
+package array;
+
+public class ArrayPar {
+public static void main(String args[]) {
+		
+		int [] num = new int [10];
+		int aleatorio;
+			
+			for (int i=0; i < num.length;i ++) {
+		//	num [i] = (int)  ( 25*2%  Math.random()) ;
+			do {
+				aleatorio = (int) (25* Math.random());
+				System.out.println("El valor aleatorio es: " + aleatorio);
+				}while (aleatorio %2 != 0);
+				num [i] = aleatorio;
+					System.out.println("El contenido de la posición: "+ i +" es " +num[i]);
+		}
+		
+		/*for (int i=0; i < num.length; i++) {
+			System.out.println("El contenido de la posición: "+ i +" es " +num[i]);
+		}*/
+		
+		
+	}
+}
+
+

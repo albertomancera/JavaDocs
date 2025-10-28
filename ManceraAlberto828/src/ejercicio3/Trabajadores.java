@@ -1,0 +1,70 @@
+package ejercicio3;
+
+public class Trabajadores {
+
+	private String nombre;
+	private int edad;
+	private String sexo;
+	private String estadoCivil;
+	private double salarioBase;
+	
+	//Constructor
+	public Trabajadores(String nombre, int edad, String sexo, String estadoCivil, double salarioBase) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+		this.estadoCivil = estadoCivil;
+		this.salarioBase = salarioBase;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getEstadoCivil() {
+		return estadoCivil;
+	}
+
+	public void setEstadoCivil(String estadoCivil) {
+		this.estadoCivil = estadoCivil;
+	}
+
+	
+	public double getSalarioBase() {
+		return salarioBase;
+	}
+
+	public void setSalarioBase(double salarioBase) {
+		this.salarioBase = salarioBase;
+	}
+
+	@Override
+	public String toString() {
+		return "Trabajadores [nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", estadoCivil=" + estadoCivil
+				+ ", salarioBase=" + salarioBase + "]";
+	}
+	
+	
+
+	
+}

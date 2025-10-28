@@ -1,0 +1,40 @@
+package coche;
+
+public class Pruebas {
+	public static void main(String[] args) {
+		
+		Empleados  trabajador1 = new Empleados("Paco");
+		Empleados trabajador2 = new Empleados ("Ana");
+		Empleados trabajador3 = new Empleados ("Juan");
+		trabajador1.cambiaSeccion("RRHH");
+	
+		
+		System.out.println(trabajador1.devuelveDatos());
+		System.out.println(trabajador2.devuelveDatos());
+		System.out.println(trabajador3.devuelveDatos());
+	}
+}
+
+class Empleados{
+	
+	public static int id = 1;//static para que haya un unico dato compartido
+	private final String nombre; //final  para no cambiar los datos
+	private String seccion;
+	
+	public Empleados(String nom) {
+		nombre = nom;
+		seccion = "Administración";
+		id++;
+	}
+	
+	//Setter = modifica la seccion
+	public void cambiaSeccion(String seccion) {
+		this.seccion = seccion;
+	}
+	
+
+	//Getter muestra los resultados
+	public String devuelveDatos() {
+		return "El nombre es: " + nombre + " y la seccion es "+ seccion+ " y el ID = "+ id;
+	}
+}

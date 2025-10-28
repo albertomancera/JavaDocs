@@ -1,0 +1,43 @@
+package ejercicio4;
+import java.util.*;
+
+public class Ejercicio4 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+	
+		int alumnos=4, asignatura=5;
+		int min=0, max=0;
+		double media;
+		int total=0;
+		int nota;
+		
+		int notas[][]= new int [alumnos][asignatura];
+		
+		for (int i=0; i<alumnos;i++) {
+			  System.out.println("Notas para Alumno " + (i + 1) + ":");
+			for (int j=0; j<asignatura; j++) {
+				System.out.print("  Asignatura " + (j + 1) + ": ");
+				notas[i][j]=entradaTeclado.nextInt();
+			}
+		}
+		for (int i=0; i<alumnos;i++) {
+			  min=notas[i][0];
+			  max=notas[i][0];
+			for (int j=0; j<asignatura; j++) {
+				nota=notas[i][j];
+				if (nota<max) {
+					max=nota;
+				}else if(nota<min) {
+					min=nota;
+				}
+				total +=nota;
+			}
+			media=total/asignatura;
+			
+			System.out.println("La nota mínima de "+ (i+1)+ ": "+min);
+			System.out.println("La nota máxima de "+ (i+1)+ ": "+ max);
+			System.out.println("La nota media de "+ (i+1)+  ": "+media);
+		}
+		
+	}
+}

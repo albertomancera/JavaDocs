@@ -1,0 +1,24 @@
+package ejemplonumprimos;
+import java.util.Scanner;
+
+public class NumerosPrimos {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+
+		int num,divisible = 0;
+		
+		System.out.println("Dime un número entero: ");
+		num = sc.nextInt();
+		
+		while(num!=divisible) {
+			
+		if(num/2==0) {
+			System.out.println("Este número no es primo");
+		}else if (num/3==0) {
+			System.out.println("Este número no es primo");
+		}
+		
+
+	}
+	}
+}

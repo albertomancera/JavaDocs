@@ -1,0 +1,88 @@
+package examen;
+
+import java.time.LocalDate;
+
+public class Embarcacion {
+	//Atributos de clase constantes
+		public static final String MATRICULA_DEFECTO = "Matrícula por defecto";
+		public static final LocalDate FECHA_ACTUAL = LocalDate.now();
+		public static final int ESLORA_DEFECTO = 10;
+		public static final int NUM_PASAJEROS_DEFECTO = 10;
+		public static final boolean BASE_PUERTO_DEFECTO = true;
+		
+		private static int numVelero = 0;
+		private static int numLanchas = 0;
+		private static int numYates = 0;
+		
+	//Atributos de objeto
+			protected final String matricula;
+			protected LocalDate fecha_construccion;
+			protected int eslora;
+			protected int num_pasajeros;
+			protected boolean base_puerto;
+			
+			public Embarcacion(String matricula, LocalDate fecha_construccion, int eslora, int num_pasajeros,
+					boolean base_puerto) throws IllegalArgumentException{
+				if(fecha_construccion.isAfter(FECHA_ACTUAL)) {
+					throw new IllegalArgumentException ("La fecha de construcción no puede ser posterior a la actual");
+				}
+				if(num_pasajeros <= 0) {
+					throw new IllegalArgumentException("El número de pasajeros no puede ser negativo ni 0 ");
+				}
+				
+				if(this.getClass().getName().equalsIgnoreCase("Velero")) {
+					numVelero++;
+				}else if(this.getClass().getName().equalsIgnoreCase("Lanchas")) {
+					numLanchas++;
+				}else if(this.getClass().getName().equalsIgnoreCase("Yates")) {
+					numYates++;
+				}
+				
+				this.matricula = matricula;
+				this.fecha_construccion = fecha_construccion;
+				this.eslora = eslora;
+				this.num_pasajeros = num_pasajeros;
+				this.base_puerto = base_puerto;
+			}
+			
+			public Embarcacion() {
+				this(MATRICULA_DEFECTO,FECHA_ACTUAL,ESLORA_DEFECTO,NUM_PASAJEROS_DEFECTO,BASE_PUERTO_DEFECTO);
+			}
+			
+			//Métodos
+			public String getMatricula() {
+				return matricula;
+			}
+			
+			public int getEslora() {
+				return eslora;
+			}
+
+			public void setEslora(int eslora) {
+				this.eslora = eslora;
+			}
+			
+			public int getNum_pasajeros() {
+				return num_pasajeros;
+			}
+
+			public boolean isBase_puerto() {
+				return base_puerto;
+			}
+			
+			public void setBase_puerto(boolean base_puerto) {
+				this.base_puerto = base_puerto;
+			}
+
+			//To String
+			@Override
+			public String toString() {
+				return "Embarcacion [matricula=" + matricula + ", fecha_construccion=" + fecha_construccion
+						+ ", eslora=" + eslora + ", num_pasajeros=" + num_pasajeros + ", base_puerto=" + base_puerto
+						+ "]";
+			}
+
+			
+			
+			
+}

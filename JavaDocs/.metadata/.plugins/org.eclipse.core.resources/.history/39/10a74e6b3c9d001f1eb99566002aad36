@@ -1,0 +1,13 @@
+package metodos;
+
+public class Metodos {
+	public static void main (String [] args) {
+		
+	}
+public static int notaAleatoria(int [] args) {
+	int nota;
+	nota = (int) (Math.random()*10);
+	System.out.println(nota);
+	return nota;
+}
+}

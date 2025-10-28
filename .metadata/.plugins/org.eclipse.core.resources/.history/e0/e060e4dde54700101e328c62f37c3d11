@@ -1,0 +1,19 @@
+package ejerciciosBasicos;
+
+import java.util.Scanner;
+
+public class Pizzeria {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		String tipoPizza;
+		
+		do {
+			System.out.println("¿De que tipo quieres la pizza, vegetariana o no vegetariana?");
+			tipoPizza = sc.nextLine();
+		}while(!tipoPizza.equalsIgnoreCase("vegetariana") && !tipoPizza.equalsIgnoreCase("no vegetariana"));
+
+	}
+
+}

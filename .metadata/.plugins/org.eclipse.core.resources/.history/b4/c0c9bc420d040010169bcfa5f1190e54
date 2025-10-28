@@ -1,0 +1,39 @@
+package coche;
+
+public class Pruebas {
+	public static void main(String[] args) {
+		
+		Empleados  trabajador1 = new Empleados("Paco");
+		Empleados trabajador2 = new Empleados ("Ana");
+		
+		trabajador1.cambiaSeccion("RRHH");
+		trabajador1.cambiarNombre("María");
+		
+		System.out.println(trabajador1.devuelveDatos());
+		System.out.println(trabajador2.devuelveDatos());
+	}
+}
+
+class Empleados{
+	private String nombre;
+	private String seccion;
+	
+	public Empleados(String nom) {
+		nombre = nom;
+		seccion = "Administración";
+	}
+	
+	//Setter = modifica la seccion
+	public void cambiaSeccion(String seccion) {
+		this.seccion = seccion;
+	}
+	
+	public void cambiarNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	//Getter muestra los resultados
+	public String devuelveDatos() {
+		return "El nombre es: " + nombre + " y la seccion es "+ seccion;
+	}
+}

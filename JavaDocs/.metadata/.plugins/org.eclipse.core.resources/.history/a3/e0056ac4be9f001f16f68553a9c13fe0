@@ -1,0 +1,24 @@
+package ejercicio;
+
+import java.util.Scanner;
+
+public class Ejercicio2Vectores {
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		
+		int numeros[]=new int [10];
+		//cargar
+		for (int i=0;i<numeros.length;i++) {
+			System.out.println("Ingrese el número que quiere caragr en la posición "+i);
+			numeros[i]=sc.nextInt();
+		}
+		//busqueda del mayor
+		int mayor =Integer.MIN_VALUE;
+		for (int i=0;i<numeros.length;i++) {
+			if(numeros[i]>mayor) {
+				mayor = numeros[i];
+			}
+		}
+	}
+
+}

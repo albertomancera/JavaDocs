@@ -1,0 +1,38 @@
+/*
+ * Objetivo: Crear la clase Vehiculo
+ * Autor: Álvaro Mozo Gaspar
+ * Fecha: 03/03/2025
+ */
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public abstract class Vehiculo {
+
+    protected String matricula;
+    protected String modelo;
+    protected LocalDate fechaFabricacion;
+
+   
+
+    public Vehiculo(String matricula, String modelo, LocalDate fechaFabricacion) {
+		this.matricula = matricula;
+		this.modelo = modelo;
+		this.fechaFabricacion = fechaFabricacion;
+	}
+
+	public String getMatricula() {
+        return matricula;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+    
+    public LocalDate fechaFabricacion() {
+    	return fechaFabricacion;
+    }
+
+    public abstract String toString();
+    
+}

@@ -1,0 +1,24 @@
+package mobiliario;
+
+public class Asiento extends Mueble {
+	public static final int ASIENTO_MIN = 1;
+	public static final int ASIENTO_MAX = 9;
+	
+	private final int numAsientos;
+	private final String tapiceria;
+	private final String color;
+	
+	public Asiento(double precio, String descripcion, int numAsientos, String tapiceria, String color)
+			throws IllegalArgumentException {
+		super(precio, descripcion);
+		if(numAsientos < ASIENTO_MIN  || numAsientos > ASIENTO_MAX) {
+			throw new IllegalArgumentException("Las plazas deben de estar entre 1 y 9");
+		}
+	
+		this.numAsientos = numAsientos;
+		this.tapiceria = tapiceria;
+		this.color = color;
+	}
+	
+	
+}

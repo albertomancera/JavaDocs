@@ -1,0 +1,22 @@
+package mobiliario;
+
+public class Asiento extends Mueble {
+	public static final int ASIENTO_MIN = 1;
+	public static final int ASIENTO_MAX = 9;
+	
+	private int numAsientos;
+	private String tapiceria;
+	private String color;
+	
+	public Asiento(double precio, String descripcion, int numAsientos, String tapiceria, String color)
+			throws IllegalArgumentException {
+		if(numAsientos <= ASIENTO_MIN  || numAsientos >= ASIENTO_MAX)
+		
+		super(precio, descripcion);
+		this.numAsientos = numAsientos;
+		this.tapiceria = tapiceria;
+		this.color = color;
+	}
+	
+	
+}

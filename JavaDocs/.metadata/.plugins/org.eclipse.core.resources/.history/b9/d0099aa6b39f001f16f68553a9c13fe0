@@ -1,0 +1,55 @@
+package ejercicio;
+
+import java.util.Scanner;
+
+public class EjercicioEstacionamiento {
+
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		
+		String patente="", tipoEst;
+		int cont0=0, cont1=0, cont2=0;
+		double precio=0, totalDia = 0;
+		
+		while(!patente.equalsIgnoreCase("FIN")) {
+		System.out.println("Dime la patente del vehículo: ");
+		patente = sc.nextLine();
+		
+		System.out.println("Dime el ripo de estacionamiento (Por hora, Media jornada o Jornada completa): ");
+		tipoEst = sc.nextLine();
+		
+		
+		switch(tipoEst) {
+		case "Por hora":
+			System.out.println("Dime cuantas horas ha estado estacionado: ");
+			int horas= sc.nextInt();
+			precio= horas*3;
+			System.out.println("Tienes que pagar: "+precio);
+			cont0++;
+			totalDia = totalDia + precio;
+			break;
+		case "Media jornada":
+			precio= 15-(15*0.05);
+			System.out.println("Tienes que pagar: "+precio);
+			cont1++;
+			totalDia = totalDia + precio;
+			break;
+			case "Jornada completa":
+			precio= 30-(30*0.10);
+			System.out.println("Tienes que pagar: "+precio);
+				cont2++;
+				totalDia = totalDia + precio;
+				break;
+		}
+		System.out.println("****** Muchas gracias por tu compra *******");
+			sc.nextLine();
+		}
+		System.out.println("La cantidad de servicios por Horas: "+cont0);
+		System.out.println("La cantidad de servicios de Media jornada : "+cont1);
+		System.out.println("La cantidad de servicios de Jornada completa : "+cont2);
+		System.out.println("El monton recaudado de dia es de  : "+totalDia);
+
+
+	}
+
+}

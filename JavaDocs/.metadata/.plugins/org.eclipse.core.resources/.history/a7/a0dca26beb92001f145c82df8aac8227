@@ -1,0 +1,38 @@
+/*
+ * Objetivo: Programa que lea números no nulos (pos, neg)
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 22/10/2024
+ */
+package ejercicio7;
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+	int num = 0;
+	int positivos = 0;
+	int negativos = 0;
+	
+	for (int i = 0; i<10; i++) {
+		System.out.println("Dime un número entero: ");
+		num= entradaTeclado.nextInt();
+		if(num>0 ) {
+			positivos++;
+		}else {
+			negativos++;
+		}
+		while(num==0) {
+			System.out.println("Error, porfavor introduce un número valido.");
+			num = entradaTeclado.nextInt();
+		}
+	}
+	
+		System.out.println("Se ha ingresado "+negativos+" negativos");
+		System.out.println("No se ha ingresado "+positivos+" positivos");
+	
+	
+
+	
+	}
+}

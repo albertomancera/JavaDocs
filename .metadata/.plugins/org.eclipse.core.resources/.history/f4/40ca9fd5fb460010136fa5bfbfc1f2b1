@@ -1,0 +1,44 @@
+package mobiliario;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		System.out.println("==1==");
+		int contador = 0;
+		while (contador < 10) {
+			int numAsientos = obtenerNumeroAleatorio(0,20);
+			try {
+				Asiento asiento1 = new Asiento(numAsientos);
+				System.out.println(asiento1);
+				contador++;
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		System.out.println("==2==");
+		int contador1 = 0;
+		while(contador1 < 10) {
+			int posicionRespaldo = obtenerNumeroAleatorio(0,8);
+			try {
+				Silla silla1 = new Silla(posicionRespaldo);
+				System.out.println(silla1);
+				contador1++;
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+	System.out.println("==3==");
+	for(int i = 0; i <10 ;i++) {
+		Sillon sillon1 = new Sillon();
+		System.out.println(sillon1);
+	}
+		
+	}
+
+	public static int obtenerNumeroAleatorio(int min, int max) {
+		 return (int)(Math.random() * (max - min + 1)) + min;
+ }
+}

@@ -1,0 +1,6 @@
+package mobiliario;
+
+public interface Personalizable {
+
+	String obtenerModulos();
+}

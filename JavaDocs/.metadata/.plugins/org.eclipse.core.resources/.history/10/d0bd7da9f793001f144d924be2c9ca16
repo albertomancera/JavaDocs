@@ -1,0 +1,9 @@
+package bucles;
+
+public class For {
+
+	/* For (iniciobucle, condición, contador bucle){
+	 }
+	 * 
+	 */
+}

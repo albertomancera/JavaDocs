@@ -1,0 +1,40 @@
+package ejercicio1;
+import java.util.*;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		String nombre;
+		String mensaje;
+		int hora, minutos;
+		
+		System.out.println("Dime tu nombre: ");
+		nombre=entradaTeclado.nextLine();
+		
+		System.out.println("Dime la hora (0 a 24): ");
+		hora=entradaTeclado.nextInt();
+		
+		System.out.println("Dime los minutos (0 a 60): ");
+		minutos=entradaTeclado.nextInt();
+		
+		if(hora <12 && minutos<60 ) {
+			System.out.println("Buenos días, "+ nombre);
+		}else {
+			if(hora>=12 && hora <=16 && minutos>00 && minutos >30 ) {
+				System.out.println("Buena sobremesa, "+nombre);
+			}else {
+				if(hora >=16 && minutos>30) {
+					System.out.println("Buenas tardes, "+nombre);
+				}else {
+					if(hora >=20 && hora<=24 && minutos>30 && minutos<60) {
+						System.out.println("Buena noches, "+nombre);
+				}
+			}
+		}
+		
+		}	
+	}	
+}
+
+

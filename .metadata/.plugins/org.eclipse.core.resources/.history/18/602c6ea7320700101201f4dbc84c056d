@@ -1,0 +1,8 @@
+package ejercicio3;
+
+public class PrincipalTrabajador {
+
+	//Lista ordenada
+	Trabajador tr1 = new Trabajador ("Manuel", 22, "Hombre", "Paro", 780);
+	Trabajador tr2 = new Trabajador ("Sofia", 21, "Mujer", "Trabajando", 1280);
+}

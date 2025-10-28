@@ -1,0 +1,83 @@
+package ejerciciosBasicos;
+
+import java.util.Scanner;
+
+public class Pizzeria {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		   String tipoPizza;
+	        String[] vegetarianos = {"Pimiento", "Tofu"};
+	        String[] noVegetarianos = {"Peperoni", "Jamón", "Salmón"};
+	        String ingredienteElegido = "";
+
+	        // Paso 1: Preguntar tipo de pizza y validar
+	        do {
+	            System.out.println("¿De qué tipo quieres la pizza, vegetariana o no vegetariana?");
+	            tipoPizza = sc.nextLine();
+	        } while (!tipoPizza.equalsIgnoreCase("vegetariana") && !tipoPizza.equalsIgnoreCase("no vegetariana"));
+
+	        // Paso 2: Mostrar menú según el tipo
+	        if (tipoPizza.equalsIgnoreCase("vegetariana")) {
+	            System.out.println("\nIngredientes vegetarianos disponibles:");
+	            for (int i = 0; i < vegetarianos.length; i++) {
+	                System.out.println((i + 1) + ". " + vegetarianos[i]);
+	            }
+
+	            // Paso 3: Elegir ingrediente
+	            System.out.print("Elige un ingrediente (1 o 2): ");
+	            int opcion = sc.nextInt();
+	            if (opcion >= 1 && opcion <= vegetarianos.length) {
+	                ingredienteElegido = vegetarianos[opcion - 1];
+	            } else {
+	                System.out.println("Opción inválida. Se usará por defecto: " + vegetarianos[0]);
+	                ingredienteElegido = vegetarianos[0];
+	            }
+	        } else {
+	            System.out.println("\nIngredientes no vegetarianos disponibles:");
+	            for (int i = 0; i < noVegetarianos.length; i++) {
+	                System.out.println((i + 1) + ". " + noVegetarianos[i]);
+	            }
+
+	            System.out.print("Elige un ingrediente (1 a 3): ");
+	            int opcion = sc.nextInt();
+	            if (opcion >= 1 && opcion <= noVegetarianos.length) {
+	                ingredienteElegido = noVegetarianos[opcion - 1];
+	            } else {
+	                System.out.println("Opción inválida. Se usará por defecto: " + noVegetarianos[0]);
+	                ingredienteElegido = noVegetarianos[0];
+	            }
+	        }
+	        
+	     // Mostrar resultado
+	        System.out.println("\nTu pizza es " + tipoPizza + " y lleva:");
+	        System.out.println("- Mozzarella");
+	        System.out.println("- Tomate");
+	        System.out.println("- " + ingredienteElegido);
+	        
+	     // Ahora mostrar todas las combinaciones posibles
+	        System.out.println("\n=== TODAS LAS COMBINACIONES POSIBLES ===");
+
+	        // Pizzas vegetarianas
+	        System.out.println("\nPizzas vegetarianas:");
+	        for (String ing : vegetarianos) {
+	            System.out.println("- Mozzarella, Tomate, " + ing);
+	        }
+
+	        // Pizzas no vegetarianas
+	        System.out.println("\nPizzas no vegetarianas:");
+	        for (String ing : noVegetarianos) {
+	            System.out.println("- Mozzarella, Tomate, " + ing);
+	        }
+
+	        // Todas las combinaciones
+	        System.out.println("\nTodas las pizzas (vegetarianas y no vegetarianas):");
+	        for (String ing : vegetarianos) {
+	            System.out.println("- (Vegetariana) Mozzarella, Tomate, " + ing);
+	        }
+	        for (String ing : noVegetarianos) {
+	            System.out.println("- (No vegetariana) Mozzarella, Tomate, " + ing);
+	        }
+	}
+}

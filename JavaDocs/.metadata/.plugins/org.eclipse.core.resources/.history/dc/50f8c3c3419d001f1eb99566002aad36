@@ -1,0 +1,30 @@
+package metodos;
+
+import java.util.*;
+public class Ejemplo {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		System.out.println("Dime un número: ");
+		int num = entradaTeclado.nextInt();
+		
+		num = parimpar();
+		System.out.println(num);
+	}
+	
+	public static int parimpar(int num) {
+	
+		
+		if(num%2==0) {
+			System.out.println("Este número es par");
+		}else {
+			if (num %2!=0) {
+			System.out.println("Este número es impar");
+			}else {
+				System.out.println("Este número es 0");
+			}
+		}
+		return num;
+	
+	}
+}

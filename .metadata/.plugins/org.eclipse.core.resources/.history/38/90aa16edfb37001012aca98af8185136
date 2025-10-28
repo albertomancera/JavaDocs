@@ -1,0 +1,6 @@
+package examen;
+
+public class Lanchas {
+	//Atributos de objeto
+	private int potencia_motor;
+}

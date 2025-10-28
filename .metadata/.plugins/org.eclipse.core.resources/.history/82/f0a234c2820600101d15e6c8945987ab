@@ -1,0 +1,38 @@
+/*
+ * Objetivo: Crear la clase Avion
+ * Autor: Álvaro Mozo Gaspar
+ * Fecha: 03/03/2025
+ */
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public class Avion extends Aereo {
+	public static int TIEMPO_MAX = 12;
+	private int tiempoMaxVuelo;
+
+  
+
+    public Avion(String matricula, String modelo, LocalDate fechaFabricacion, int asientos, int tiempoMaxVuelo)
+			throws IllegalArgumentException {
+		super(matricula, modelo, fechaFabricacion, asientos);
+		this.tiempoMaxVuelo = tiempoMaxVuelo;
+	}
+
+    public Avion() {
+		this(MATRICULA_DEFECTO, MODELO_DEFECTO, FECHA_FABRICACION_DEFECTO, ASIENTOS_DEFECTO, TIEMPO_MAX);
+	}
+
+    public double precioAlquiler(int numDias) {
+    	double precio = numDias * 500;
+    	if(tiempoMaxVuelo > 10) {
+    		precio = numDias * 700;
+    	}
+    	return precio;
+    }
+    
+	public String toString() {
+        return String.format("Avión [Matrícula: " + matricula + ", Modelo: " + modelo + ", Asientos: " + asientos + ", Tiempo Máximo de Vuelo: " + tiempoMaxVuelo + " horas]");
+    }
+
+}

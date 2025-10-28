@@ -1,0 +1,26 @@
+package ejercicio2;
+import java.util.Scanner;
+
+public class Ejercicio2 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		int edad;
+		
+		System.out.println("Dime tu edad: ");
+		edad = sc.nextInt();
+		
+		
+		
+	}
+	// Devuelve verdadero si a>=18, falso en caso contrario
+	public static boolean esMayorEdad(int edad) {
+	 boolean esmayor ;
+	 if (edad>=18) {
+		 esmayor= true;
+	 }else {
+		 esmayor=false;
+	 }		
+	 return esmayor;
+	}
+}

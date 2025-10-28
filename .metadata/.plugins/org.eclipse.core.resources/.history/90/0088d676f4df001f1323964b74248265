@@ -1,0 +1,12 @@
+package herencia;
+
+public class Analista extends Trabajador {
+	public static final String HERRAMIENTA_DEFAULT = "Nada";
+	public static final int ANNOSEXP_DEFAULT = 0;
+	public static final boolean HASIDOPROG_DEFAULT = false;
+	
+	private String herramienta;
+	private int annosExp;
+	private boolean haSidoProg;
+	
+}

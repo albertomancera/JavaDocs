@@ -1,0 +1,33 @@
+/*
+ * Objetivo: Crear la clase Aereo
+ * Autor: Álvaro Mozo Gaspar
+ * Fecha: 03/03/2025
+ */
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public abstract class Aereo extends Vehiculo {
+
+    protected final int asientos;
+
+	public Aereo(String matricula, String modelo, LocalDate fechaFabricacion, int asientos)throws IllegalArgumentException {
+		super(matricula, modelo, fechaFabricacion);
+		
+		if(matricula == null || matricula.isEmpty()) {
+			throw new IllegalArgumentException("La matricula no puede estar vacía");
+		}
+		this.asientos = asientos;
+	}
+
+	public void setMatricula(String matricula) throws IllegalArgumentException{
+		if(matricula.matches("[A-Za-z]{4}[0-9]{6}")) {
+			throw new IllegalArgumentException("El formato de la matricula tiene que ser 9999 AAAA");
+		}if(matricula == null || matricula.isEmpty()) {
+			throw new IllegalArgumentException("La matricula no puede estar vacía");
+		}
+		
+		this.matricula = matricula;
+	}
+  
+}

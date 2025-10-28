@@ -1,0 +1,25 @@
+package poo;
+
+public class Persona {
+
+	//Atributos
+	private String nombre;			//public , privated, protected   ENCAPSULAMIENTO CON private
+	private String apellidos;
+	private int edad;
+	
+	//Constructor por defecto
+	public Persona() {
+		this.nombre = "";
+		this.apellidos = "";
+		this.edad = 0;
+	}
+	
+	public Persona(String nombre, String apellidos, int edad) {
+		if (edad < 0) {
+			throw new IllegalArgumentException("La edad debe ser positiva");
+		}
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.edad = edad;
+	}
+}

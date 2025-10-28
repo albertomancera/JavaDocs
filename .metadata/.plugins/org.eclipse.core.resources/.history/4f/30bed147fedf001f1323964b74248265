@@ -1,0 +1,42 @@
+package herencia;
+
+import java.time.LocalDate;
+
+public class Analista extends Trabajador {
+	public static final String HERRAMIENTA_DEFAULT = "Nada";
+	public static final int ANNOSEXP_DEFAULT = 0;
+	public static boolean HASIDOPROG_DEFAULT = false;
+	
+	private String herramienta;
+	private int annosExp;
+	private boolean haSidoProg;
+	
+	public Analista(String dni, String nombre, String apellidos, LocalDate fechaInicio, int numHijos,
+			String herramienta, int annosExp, boolean haSidoProg) {
+		super(dni, nombre, apellidos, fechaInicio, numHijos);
+		this.herramienta = herramienta;
+		this.annosExp = annosExp;
+		this.haSidoProg = haSidoProg;
+	}
+
+	@Override
+	public String toString() {
+		return "Analista [herramienta=" + herramienta + ", annosExp=" + annosExp + ", haSidoProg=" + haSidoProg + "]";
+	}
+	
+	@Override
+	public double calcularNomina(float salarioBase) {
+		double salarioTotal = salarioBase;
+		
+		salarioTotal += salarioBase * 0.10 * annosExp;
+		
+		if(haSidoProg = true) {
+			salarioTotal += salarioBase + 200;
+		}
+		return salarioTotal;
+	}
+	
+	
+	
+	
+}

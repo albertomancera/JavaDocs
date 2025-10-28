@@ -1,0 +1,99 @@
+/*
+ * Objetivo: mostrar el desarrollo de las clases creadas
+ * Fecha: 11/03/2025
+ * Autor: Alberto Mancera Plaza
+ */
+package teatros;
+import libtarea3.Teatro;
+
+public class PrincipalTeatro {
+
+	public static void main(String[] args) {
+		//1. Crea diez teatros por defecto.
+		//Evidencia: mostrar el estado de los teatros creados 
+		Teatro [] teatros = {
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+				new Teatro (),
+		};
+		
+		for (int i = 0; i < teatros.length; i++) {
+			System.out.println(teatros[i].toString());
+		}
+		
+		//2. Compra 25 entradas para cada uno de los teatros creados. 
+		//Evidencia: mostrar el estado de los teatros creados 
+		
+		try {
+		for (int i = 0; i < teatros.length; i++) {
+			teatros[i].comprarEntradas(25);
+		}
+		}catch(IllegalStateException e) {
+			
+			System.out.println(e.getMessage());
+			
+		for (int i = 0; i < teatros.length; i++) {
+			System.out.println(teatros[i].toString());
+		}
+		}
+		
+		//3. Asigna la obra "La Celestina" a los cinco primeros teatros creados.
+		//Evidencia: mostrar el estado de los cinco teatros.
+		for(int i=0; i < 5; i++) {
+			teatros[i].asignarObra("La Celestina");
+			System.out.println(teatros[i].toString());
+		}
+	
+		
+		//4. Crea un teatro con el nombre "Cervantes" y aforo 500. Asigna la obra "La vida es bella" a este teatro.
+		//Evidencia: mostrar el estado del teatro creado.
+		Teatro teatro = new Teatro ("Cervantes", 500);
+		try {
+		teatro.asignarObra("La vida es bella");
+		}catch(IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		System.out.println(teatro.toString());
+		}
+		//5. Compra un número de entradas aleatorio entre 100 y 1000. En el caso de que supere las entradas disponibles, se comprarán todas las posibles.
+		//Evidencia: mostrar el número de entradas a comprar y el estado del teatro Cervantes.
+		
+		
+		int cantidadAleatoria = (int) (Math.random()* 101) +100;
+		System.out.println("El número de entradas a comprar son: "+ cantidadAleatoria);
+		teatro.comprarEntradas(cantidadAleatoria);
+		System.out.println(teatro.toString());
+		
+		//6. Crea un teatro con el nombre "Soho Málaga" y aforo 1000.
+		//Evidencia: mostrar el estado del teatro Soho Málaga.
+		Teatro teatro1 = new Teatro ("Soho Málaga", 1000);
+		
+		System.out.println(teatro1.toString());
+		
+		
+		//7. Traspasa la obra asignada del teatro "Cervantes" al teatro "Soho Málaga".
+		//Evidencia: mostrar el estado de los teatros.
+		try {
+		teatro.traspasarObra(teatro1);
+		}catch(IllegalStateException e1) {
+		
+		System.out.println(e1.getMessage());
+			
+		System.out.println(teatro1.toString());
+		System.out.println(teatro.toString());
+		}
+		//8. Muestra el número de entradas vendidas y entradas por vender de los teatros "Cervantes" y "Soho Málaga".
+		//Evidencia: mostrar el número de entradas vendidas y por vender para los teatros.
+		System.out.println(teatro1.getEntradasVendidas());
+		System.out.println(teatro.getEntradasVendidas());
+		
+		
+	}
+
+}

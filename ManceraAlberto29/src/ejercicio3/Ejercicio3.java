@@ -1,0 +1,18 @@
+/*
+ * Objetivo: Mostrar números pares
+ * Autor: Alberto Mancera Plaza
+ * Fecha. 22/10/2024
+ */
+package ejercicio3;
+
+public class Ejercicio3 {
+	public static void main(String args[]) {
+		int num = 1;
+		 	while (num <200 ) {
+		 		if (num %2 ==0) {
+		 			System.out.println("Los numeros pares : "+num);
+		 		}
+		 		num ++;;		 	
+		 		}
+	}
+}

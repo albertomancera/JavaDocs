@@ -1,0 +1,24 @@
+package metodos;
+
+import java.util.Scanner;
+
+public class MetodosFunciones {
+
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		double a, b, operador;
+		
+		System.out.println("Dime un operando: ");
+		a = sc.nextDouble();
+		
+		System.out.println("Dime otro operando: ");
+		b = sc.nextDouble();
+		
+		
+	}
+		
+		public static double operacion (double a, double b, String operador) {
+			
+	}
+	
+}

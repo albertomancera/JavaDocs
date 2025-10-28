@@ -1,0 +1,25 @@
+/*
+ * Objetivo:Utilizar un contador
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 21/10/2024
+ */
+package ejercicio4;
+import java.util.*;
+
+public class Ejercicio4 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		int num=1;
+		
+		int num2;
+		System.out.println("Dime un número: ");
+		num2 = entradaTeclado.nextInt();
+				
+		while(num<=num2) {
+			System.out.println(num);
+			num++;
+		}
+	
+	}
+}

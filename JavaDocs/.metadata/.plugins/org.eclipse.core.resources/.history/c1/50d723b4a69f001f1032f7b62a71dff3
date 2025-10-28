@@ -1,0 +1,15 @@
+package ejercicio2;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		
+		int num=1;
+		
+		for(num=1; num<=35;num++ ) {
+			System.out.println(num);
+		}
+
+	}
+
+}

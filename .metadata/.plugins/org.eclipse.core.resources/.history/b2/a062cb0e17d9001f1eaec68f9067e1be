@@ -1,0 +1,18 @@
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+	
+		Scanner sc= new Scanner(System.in);
+		
+		Persona persona1 = new Persona("78888888A","Luis","Loopez Villalba", 24);
+		
+		System.out.println(persona1.getDni());
+		System.out.println(persona1.getNombre());
+		System.out.println(persona1.getApellidos());
+		System.out.println(persona1.getEdad());
+}
+}

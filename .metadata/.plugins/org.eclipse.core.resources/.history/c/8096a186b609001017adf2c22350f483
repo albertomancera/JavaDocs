@@ -1,0 +1,81 @@
+package ejercicio2;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Agenda {
+	 Scanner sc = new Scanner(System.in);
+	//Atributos
+	String nombre;
+	String direccion;
+	int telefono;
+	String email;
+	String fechaNacimiento;
+	
+	//Constructor
+	public Agenda(String nombre, String direccion, int telefono, String email, String fechaNacimiento) {
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.email = email;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public void ingresarDatos() {
+		System.out.println("Ingrese Nombre: ");
+		this.nombre = sc.nextLine();
+		System.out.println("Ingrese una Dirrección: ");
+		this.direccion = sc.nextLine();
+		System.out.println("Ingrese un telefóno: ");
+		this.telefono = sc.nextInt();
+		System.out.println("Ingrese un email: ");
+		this.email = sc.nextLine();
+		System.out.println("Ingrese una fecha de nacimiento formato(dd/MM/YYYY): ");
+		this.fechaNacimiento = sc.nextLine();
+	}
+	
+	//Getter y Setter
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public int getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(String fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	
+
+	
+}

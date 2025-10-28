@@ -1,0 +1,21 @@
+/*
+ * Objetivo: Almacenar y mostrar datos de un array(iguales o superiores) 
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio8;
+import java.util.*;
+
+public class Ejercicio8 {
+	public static void main(String args[]) {
+	Scanner entradaTeclado = new Scanner(System.in);
+		
+	int array[]= new int [100];
+	for (int i=0; i<100; i++) {
+		double num = (Math.random()*1.0);
+		
+		System.out.println("Dime un valor real (R): ");
+		double r= entradaTeclado.nextDouble();
+	}
+	}
+}

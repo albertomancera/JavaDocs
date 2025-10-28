@@ -1,0 +1,27 @@
+/*
+ * Objetivo: Array bidimensional (tabla de multiplicar)
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 29/10/2024
+ */
+package ejercicio2;
+
+public class Ejercicio2 {
+	public static void main(String args[]) {
+		
+		final int columnas=10;
+		final int filas=10;
+		
+		int tabla[][]=new int [columnas][filas];
+		for (int i=0;i<columnas;i++) {
+			for(int j=0;j<filas;j++) {
+				tabla[i][j]=(i+1)*(j+1);
+			}
+		}
+		for (int i=0;i< columnas ;i++) {
+			for(int j=0;j<filas;j++) {
+			System.out.print(tabla[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}

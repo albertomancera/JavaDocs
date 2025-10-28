@@ -1,0 +1,58 @@
+package ejercicio3;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class PrincipalTrabajador {
+	public static void main(String[] args) {
+	//Lista ordenada
+	Trabajadores tr1 = new Trabajadores ("Manuel", 22, "Hombre", "Casado", 780);
+	Trabajadores tr2 = new Trabajadores ("Sofia", 21, "Mujer", "Soltero", 1280);
+	Trabajadores tr3 = new Trabajadores ("Pedro", 30, "Hombre", "Soltero", 1680);
+	Trabajadores tr4 = new Trabajadores ("Luisma", 19, "Mujer", "Casado", 890);
+	
+	List<Trabajadores> trabajador = new ArrayList<>();
+	
+	trabajador.add(tr1);
+	trabajador.add(tr2);
+	trabajador.add(tr3);
+	trabajador.add(tr4);
+	
+	Collections.sort(trabajador, Comparator.comparing(Trabajadores::getSexo)
+            .thenComparing(Trabajadores::getEstadoCivil));
+	
+	//Calcular 
+	int trabajadoresMasculinos = 0;
+	int trabajadorasCasadas = 0;
+	
+	double sumaSueldos =0;
+	
+	for (Trabajadores trabajadores : trabajador) {
+		sumaSueldos += trabajadores.getSalarioBase() ;
+		
+		if(trabajadores.getSexo() == "Hombre") {
+			trabajadoresMasculinos ++;
+		}
+		if(trabajadores.getEstadoCivil() == "Casado" && trabajadores.getSexo() == "Mujer") {
+			trabajadorasCasadas ++;
+		}
+	}
+	
+	
+	//Resultados
+			System.out.println("Mostrar todos los trabajadores ordenados por sexo y estado civil : ");
+			  for (Trabajadores trabajadores : trabajador) {
+				System.out.println(trabajadores);
+			}
+			System.out.println("----------------------------------------");
+			System.out.println(" La cantidad de trabajadores del sexo masculino : "+ trabajadoresMasculinos);
+			System.out.println("----------------------------------------");
+			System.out.println("Cantidad de trabajadoras casadas: "+ trabajadorasCasadas);
+			System.out.println("----------------------------------------");
+			System.out.println("Suma de todos los sueldos: "+ sumaSueldos);
+	}
+	
+	
+}

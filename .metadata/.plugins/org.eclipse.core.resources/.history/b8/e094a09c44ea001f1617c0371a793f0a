@@ -1,0 +1,82 @@
+package ejercicio1;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ComputadorVuelo {
+	//ATRIBUTOS
+	//ATRIBUTOS CONSTANTES
+	public static final String PILOTO_DEFECTO = "Juan Pérez";
+	public static final String MATRICULA_DEFECTO = "EC-ABC";
+	public static final String MODELO_DEFECTO = "Cessna 152";
+	public static final int MIN_ALTITUD = 1000;
+	public static final int MAX_ALTITUD = 3000;
+	public static final int VUELO_ESCUELA = 0;
+	public static final int VUELO_PRIVADO = 1;
+	
+	//ATRIBUTOS DE CLASE
+	private static int cantidadTotalAero = 0;
+	private static int cantidadVolando;
+	private static int cantidadTotalHoras;
+	
+	private String matricula = "";
+	private final String modelo;
+	
+	//Van cambiando
+	private boolean volando;
+	private String nombrePiloto;
+	private int tipoVuelo;
+	private double tiempoTotalVuelo;
+	private double velocidad;
+	private double rumbo;
+	private double altitud;
+	
+	Pattern patron=Pattern.compile("[A-Z]{2}-[A-Z]{3}");
+	Matcher texto= patron.matcher(matricula);
+	boolean encaja=texto.matches();
+	
+	//Constructores
+	public ComputadorVuelo(String matricula, String modelo, String nombrePiloto) throws NullPointerException , IllegalArgumentException {
+		if(matricula == null) {
+			throw new NullPointerException (" La matrícula de la aeronave no puede ser nula");		
+		}else if(!encaja) {
+			throw new IllegalArgumentException (" El formato de la matrícula es incorrecto:");
+		}else if(matricula == " " ) {
+			throw new IllegalArgumentException ("La matrícula contiene una cadena vacía");			
+		}
+			
+		this.matricula = matricula;
+		this.modelo = modelo;
+		this.nombrePiloto = nombrePiloto;
+		
+		cantidadTotalAero ++;
+		cantidadVolando ++;
+		
+	}
+
+	public ComputadorVuelo(String matricula, String modelo) {
+		
+		this.matricula = matricula;
+		this.modelo = modelo;
+		this.nombrePiloto = PILOTO_DEFECTO;
+		
+		cantidadTotalAero ++;
+		cantidadVolando ++;
+	}
+
+	public ComputadorVuelo() {
+	this( MATRICULA_DEFECTO, MODELO_DEFECTO, PILOTO_DEFECTO);
+	}
+	
+	//METODOS
+	public void crearArrayComputadorVuelo (int cantidadAeronaves) throws IllegalArgumentException{
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}

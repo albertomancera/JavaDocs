@@ -1,0 +1,31 @@
+package examenT1parcial;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+			
+		char char1, char2;
+		
+		do {
+			System.out.println("Introduce el primer caracter: ");
+			char1 = sc.nextLine().charAt(0);
+			
+			System.out.println("Introduce el segundo caracter: ");
+			char2 = sc.nextLine().charAt(0);
+			
+			if(Character.toLowerCase(char1) == Character.toLowerCase(char2)) {
+				System.out.println("Los caracteres son iguales");
+			}else {
+				System.out.println("Los caracteres no son iguales");
+			}
+			
+		}while(!((char1 == 'n' || char1 == 'N') && (char2 == 'o' || char2 == 'O')));
+
+		System.out.println("Has introducido "+ char1 + " y " + char2 + " el programa termina");
+		
+	}
+
+}

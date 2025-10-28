@@ -1,0 +1,3 @@
+o Crearemos tres objetos, un objeto de la clase Humano y otros dos de la clase
+Ciudadano. Al crearlos usaremos el constructor para darle valores en la propia
+creación.

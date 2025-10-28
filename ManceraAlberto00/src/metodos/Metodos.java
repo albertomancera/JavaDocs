@@ -1,0 +1,31 @@
+package metodos;
+import java.util.*;
+
+public class Metodos {
+	public static void main (String [] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		int nota;
+				
+		nota = notaAleatoria(50);
+		System.out.println(nota);
+		
+		nota = notamin(50,10);
+		System.out.println(nota);
+	}
+	//Devuelve una nota entre 0 y un intervalo
+	public static int notaAleatoria(int intervalo) {
+		int nota;
+		nota = (int) Math.ceil(Math.random()*intervalo);
+		return nota;
+	}
+	//Devuelve una nota aleatoria 
+	public static int notamin(int intervalo, int minimo) {
+		int nota;
+		
+		nota =notaAleatoria(intervalo-minimo)+ minimo;
+		return nota;
+	}
+	
+	
+}

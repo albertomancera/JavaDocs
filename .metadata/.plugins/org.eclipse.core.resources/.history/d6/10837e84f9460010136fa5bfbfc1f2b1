@@ -1,0 +1,16 @@
+package mobiliario;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		System.out.println("==1==");
+		
+		
+		
+	}
+
+	public static int obtenerNumeroAleatorio(int min, int max) {
+		 return (int)(Math.random() * (max - min + 1)) + min;
+ }
+}

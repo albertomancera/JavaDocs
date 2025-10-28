@@ -1,0 +1,39 @@
+
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public abstract class Vehiculo {
+
+    protected String matricula;
+    protected String modelo;
+    protected LocalDate fechaFabricacion;
+
+   
+
+    public Vehiculo(String matricula, String modelo, LocalDate fechaFabricacion) {
+		this.matricula = matricula;
+		this.modelo = modelo;
+		this.fechaFabricacion = fechaFabricacion;
+	}
+
+	public String getMatricula() {
+        return matricula;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+    
+    public LocalDate fechaFabricacion() {
+    	return fechaFabricacion;
+    }
+
+    public abstract String toString();
+
+	public double precioAlquiler(int numDias) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+    
+}

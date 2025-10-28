@@ -1,0 +1,18 @@
+package ejercicio1;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+
+		String anno;
+		
+		System.out.println("Introduzca un año(entre 1801-2100): ");
+		anno = entradaTeclado.nextLine();
+		
+
+		Pattern patron=Pattern.compile("[1801-2100");
+	}
+
+}

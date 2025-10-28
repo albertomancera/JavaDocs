@@ -1,0 +1,33 @@
+package ejercicio7;
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+	int num = 0;
+	int positivos = 0;
+	int negativos = 0;
+	
+	System.out.println("Por favor, introduce 100 números no nulos");
+	
+	for (int i = 0; i<10; i++) {
+		while (num == 0) {
+			System.out.print("Número " + (i + 1) + ": ");
+            num = entradaTeclado.nextInt();
+            
+            if (num == 0) {
+                System.out.println("El número no puede ser nulo, introduce otro número.");
+            }
+		}
+	}
+		
+	if (num > 0) {
+		positivos++;
+	}else {
+		negativos++;
+	}
+	System.out.println("Hay "+positivos+" números positivos");
+	System.out.println("Hay "+negativos+" números negativos");
+	}
+}

@@ -1,0 +1,48 @@
+package ejercicio5;
+import java.util.*;
+
+public class Ejercicio5 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+	System.out.println("Introduce el múmero de personas: ");
+	int n= entradaTeclado.nextInt();
+		
+	int[][]datos = new int [n][2];
+	for(int i=0; i<n;i++) {
+		System.out.println("Persona "+ (i+1)+ ":");
+		System.out.print("Género (0 para varón, 1 para mujer): " );
+		datos[i][0]= entradaTeclado.nextInt();
+		System.out.println("Sueldo: ");
+		datos[i][1]=entradaTeclado.nextInt();
+		}
+	
+	int sumahombre=0, sumamujer=0, cuentahombres=0, cuentamujeres=0;
+	
+	for(int i=0; i<n;i++) {
+		if(datos[i][0]==0) {
+			sumahombre +=datos[i][1];
+			cuentahombres++;
+		}else if(datos[i][0]==1) {
+			sumamujer +=datos[i][1];
+			cuentamujeres++;
+		}
+	}
+	double mediahombres = cuentahombres > 0 ? sumahombre / cuentahombres : 0;
+    double mediamujeres = cuentamujeres > 0 ? sumamujer / cuentamujeres : 0;
+
+    System.out.printf("\nSueldo medio de hombres: %.2f%n", mediahombres);
+    O
+	System.out.printf("Sueldo medio de mujeres: %.2f%n", mediaMujeres);
+
+    // Verificar si hay brecha salarial
+    if (mediahombres > mediaMujeres) {
+        System.out.println("Existe una brecha salarial: los hombres ganan más en promedio.");
+    } else if (mediaMujeres > mediahombres) {
+        System.out.println("Existe una brecha salarial: las mujeres ganan más en promedio.");
+    } else {
+        System.out.println("No existe brecha salarial: ambos géneros ganan lo mismo en promedio.");
+    }
+	
+	}
+}

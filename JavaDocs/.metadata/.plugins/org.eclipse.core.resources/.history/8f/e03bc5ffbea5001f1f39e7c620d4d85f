@@ -1,0 +1,20 @@
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		int num, cont=0;
+		
+		System.out.println("Introduce un número (El programa acaba cuando salga un número negativo): ");
+		num=sc.nextInt();
+		cont ++;
+		while(num<0) {
+		
+		}
+		System.out.println("El programa a acabado");
+	}
+
+}

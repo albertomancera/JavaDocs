@@ -1,0 +1,28 @@
+package operadores;
+
+public class Operadores {
+	public static void main(String[] args) {
+	/* Aritméticos
+	+: suma
+	-: resta
+	*: multiplicación
+	/: división
+	*/
+	
+	/* Lógicos, relacionales y booleanos
+	 >: mayor que
+	 <: menor que
+	 !=: distinto
+	 ==: igual que
+	 */
+	
+	/* Incremento y decremento
+	 ++: incremento
+	 --: Decremento
+	 +=nº: Incremento
+	 -=nº: decremento
+	 */
+		
+	//par = num%2==0
+	}
+}

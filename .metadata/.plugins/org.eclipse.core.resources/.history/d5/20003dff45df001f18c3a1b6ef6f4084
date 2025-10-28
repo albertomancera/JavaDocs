@@ -1,0 +1,9 @@
+package herencia;
+
+public class Trabajador {
+
+	/*dni nnombre apelidos fecha inicio numero hijos programador : lenguajr de porgramacion q conoce, AÑOS DE EXPERIENCIA , o si es jefe de quipo ANALISTA: herramienta rabaja, año experiencia , 
+	 * si antes programador INGENIERO ; categoria (senior o junior), directivo o  no*/
+	
+	 
+}

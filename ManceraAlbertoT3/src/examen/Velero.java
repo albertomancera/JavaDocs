@@ -1,0 +1,42 @@
+/*
+ * Autor: Alberto Mancera Plaza
+ * Objetivo: Crear la clase Velero
+ * Fecha: 23/05/20025
+ */
+package examen;
+
+import java.time.LocalDate;
+import java.util.stream.Stream;
+
+
+public class Velero extends Embarcacion {
+	//Atributos de clase constantes
+	public static final int NUM_MASTILES_DEFECTO = 1;
+	
+	//Atributos de objeto
+			private int num_mastiles;
+			
+	
+	public Velero(String matricula, LocalDate fecha_construccion, int eslora, int num_pasajeros, boolean base_puerto,
+			int num_mastiles) throws IllegalArgumentException {
+		super(matricula, fecha_construccion, eslora, num_pasajeros, base_puerto);
+		this.num_mastiles = num_mastiles;
+	}
+
+	public Velero() {
+		super();
+		this.num_mastiles = NUM_MASTILES_DEFECTO;
+	}
+	
+	public int getNum_mastiles() {
+		return num_mastiles;
+	}
+
+	@Override
+	public String toString() {
+		return "Velero [num_mastiles=" + num_mastiles + "]" + super.toString();
+	}
+
+	
+			
+}

@@ -1,0 +1,50 @@
+package ejercicio;
+
+import java.util.Scanner;
+
+public class EjercicioEstacionamiento {
+
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		
+		String patente="", tipoEst;
+		int cont0=0, cont1=0, cont2=0;
+		double totalDia = 0;
+		
+		while(!patente.equalsIgnoreCase("FIN")) {
+		System.out.println("Dime la patente del vehículo: ");
+		patente = sc.nextLine();
+		
+		System.out.println("Dime el ripo de estacionamiento (Por hora, Media jornada o Jornada completa): ");
+		tipoEst = sc.nextLine();
+		
+		
+		switch(tipoEst) {
+		case "Por hora":
+			System.out.println("Dime cuantas horas ha estado estacionado: ");
+			int horas= sc.nextInt();
+			int precio= horas*3;
+			cont0++;
+			totalDia = totalDia + precio;
+			break;
+		case "Media jornada":
+			double precio1= 15-(15*0.05);
+			cont1++;
+			totalDia = totalDia + precio1;
+			break;
+			case "Jornada completa":
+				double precio2= 30-(30*0.10);
+				cont2++;
+				totalDia = totalDia + precio2;
+				break;
+		}
+		System.out.println("****** Muchas gracias por tu compra *******");
+			sc.nextLine();
+		}
+		System.out.println("La cantidad de servicios por Horas: "+cont0);
+		System.out.println("La cantidad de servicios de Media jornada : "+cont1);
+		System.out.println("La cantidad de servicios de Jornada completa : "+cont2);
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package mobiliario;
+
+public class Silla extends Asiento {
+	public static final int MIN_POSICION = 1;
+	public static final int MAX_POSICION = 4;
+
+
+	private int posicionRespaldo;
+}

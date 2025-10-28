@@ -1,0 +1,16 @@
+package mobiliario;
+
+public class Sillon extends Asiento {
+	public static final int POS_BAJADO = 0;
+	public static final int POS_SUBIDO = 1;
+	
+	private int posicionSillon;
+
+	public Sillon(double precio, String descripcion, String tapiceria, String color,
+			int posicionSillon) throws IllegalArgumentException {
+		super(precio, descripcion, Asiento.MIN_PLAZAS, tapiceria, color);
+		this.posicionSillon = posicionSillon;
+	}
+	
+	
+}

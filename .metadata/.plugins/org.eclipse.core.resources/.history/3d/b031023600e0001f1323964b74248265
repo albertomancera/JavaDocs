@@ -1,0 +1,60 @@
+package herencia;
+
+import java.time.LocalDate;
+
+public class Ingeniero extends Trabajador{
+
+	public static boolean SENIOR_DEFAULT;
+	public static boolean DIRECTIVO_DEFAULT;
+	
+	protected boolean senior;
+	protected boolean directivo;
+	
+	public Ingeniero(String dni, String nombre, String apellidos, LocalDate fechaInicio, int numHijos, boolean senior,
+			boolean directivo) {
+		super(dni, nombre, apellidos, fechaInicio, numHijos);
+		this.senior = senior;
+		this.directivo = directivo;
+	}
+
+	@Override
+	public String toString() {
+		return "Ingeniero [senior=" + senior + ", directivo=" + directivo + "]";
+	}
+
+	@Override
+	public double calcularNomina(float salarioBase) {
+		double salarioTotal = salarioBase;
+		  
+		  if(senior == true) {
+			  salarioTotal += salarioBase * 0.30;
+		  }else if(directivo == true) {
+			  salarioTotal +=salarioBase + 1000;
+		  }
+		  return salarioTotal;
+	}
+
+	public boolean isSenior() {
+		return senior;
+	}
+
+	public void setSenior(boolean senior) {
+		this.senior = senior;
+	}
+
+	public boolean isDirectivo() {
+		return directivo;
+	}
+
+	public void setDirectivo(boolean directivo) {
+		this.directivo = directivo;
+	}
+
+	
+
+
+
+	
+	
+
+}

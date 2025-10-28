@@ -1,0 +1,21 @@
+/*
+  * Objetivo: Almacenar y mostrar datos de 2 arrays 
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio11;
+
+public class Ejercicio11 {
+	public static void main(String args[]) {
+		
+		int array[]= new int[100];
+		for (int i=1; i<=100;i++) {
+			int num=array[i];
+			System.out.println(+ num);
+		}
+		
+		int array2[]=new int[100];
+		
+		
+	}
+}

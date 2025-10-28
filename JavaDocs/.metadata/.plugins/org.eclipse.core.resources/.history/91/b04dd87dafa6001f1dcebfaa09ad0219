@@ -1,0 +1,28 @@
+package ejercicio13;
+import java.util.Scanner;
+
+public class Ejercicio13 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		double cantsin,cantcon;
+		
+		System.out.println("Dime la cantidad sin descuento: ");
+		cantsin= sc.nextDouble();
+		
+		System.out.println("Ahora la cantidad con descuento: ");
+		cantcon= sc.nextDouble();
+		
+
+	}
+	//
+	public static double descuento(double cantsin, double cantcon) {
+		int porcentaje;
+		
+		porcentaje =(int) (cantcon- cantsin)/cantcon*100 ;
+		
+		
+		return porcentaje;
+	}
+
+}

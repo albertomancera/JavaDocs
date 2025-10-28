@@ -1,0 +1,25 @@
+package mobiliario;
+
+public abstract class Almacenaje extends Mueble{
+	//Atributos de clase constante
+		public final static int MIN_MODULOS = 1;
+		public final static int MAX_MODULOS = 20;
+		
+		//Atributos de objeto
+		protected double anchura;
+		protected double altura;
+		private int numMaxModulos;
+		protected Modulo[] array;
+		protected int modulosAnadidos = 0;
+		
+		public Almacenaje(double precio, String descripcion, double anchura, double altura, int numMaxModulos) throws IllegalArgumentException {
+			super(precio, descripcion);
+			this.anchura = anchura;
+			this.altura = altura;
+			this.numMaxModulos = numMaxModulos;
+			this.array = array;
+			this.modulosAnadidos = modulosAnadidos;
+		}
+		
+		
+}

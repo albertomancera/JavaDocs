@@ -1,0 +1,21 @@
+/*
+ * Objetivo: Array bidimensional (pos, neg y ceros)
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 29/10/2024
+ */
+package ejercicio3;
+import java.util.*;
+
+public class Ejercicio3 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+	
+		int n, m,positivo, negativo, cero;
+		
+		System.out.println("Dime un tamaño para N: ");
+		n=entradaTeclado.nextInt();
+		
+		System.out.println("Dime un tamaño para M: ");
+		m=entradaTeclado.nextInt();
+	}
+}

@@ -1,0 +1,24 @@
+package ejercicio1;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		final int local=5;
+		final int visitante=5;
+		
+		
+		int [][] partidos = new int [local][visitante];
+	
+		for(int i=0; i<local ; i++) {
+			local= (int)(Math.random()*5);
+			System.out.println(golesLocal[i]);
+		}
+		
+			
+		
+		
+	}
+
+}

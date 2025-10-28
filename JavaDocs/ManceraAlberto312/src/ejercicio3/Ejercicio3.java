@@ -1,0 +1,31 @@
+/*
+ * Objetivo: Pedir una cadena de texto y mostrar un codigo de ellas
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 08/11/2024
+ */
+package ejercicio3;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		String nombre,apellido1, apellido2;
+		
+		System.out.println("Dime tu nombre: ");
+		nombre = entradaTeclado.nextLine();
+		
+		System.out.println("Dime tu primer apellido: ");
+		apellido1 = entradaTeclado.nextLine();
+		
+		System.out.println("Dime tu segundo apellido: ");
+		apellido2 = entradaTeclado.nextLine();
+		
+		String cadena = nombre.substring(0, 3)+ apellido1.substring(0,3)+ apellido2.substring(0, 3);
+		
+		System.out.println("La cadena es: " +cadena.toUpperCase());
+
+	}
+
+}

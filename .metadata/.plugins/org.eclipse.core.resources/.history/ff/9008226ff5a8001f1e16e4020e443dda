@@ -1,0 +1,16 @@
+package objetos;
+
+import java.awt.Rectangle;
+
+public class Objetos {
+
+	public static void main(String[] args) {
+		
+		Rectangle rectangulo1;//Declaro el objeto
+		
+		rectangulo1 = new Rectangle();
+		System.out.println(rectangulo1);
+		rectangulo1.setSize(3, 5);//Para dar la base y altura
+	}
+
+}

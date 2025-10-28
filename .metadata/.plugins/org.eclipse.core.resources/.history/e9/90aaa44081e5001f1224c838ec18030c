@@ -1,0 +1,46 @@
+package poo;
+
+public class Vehiculo {
+	//Atributos constantes
+	public static final double CONSUMO_MINIMO_MEDIO = 2;
+	public static final double CONSUMO_MAXIMO_MEDIO = 20;
+	public static final int CAPACIDAD_MINIMA_DEPOSITO = 10;
+	public static final int CAPACIDAD_MAXIMA_DEPOSITO = 100;
+	public static final double CONSUMO_ARRANCAR = 0.02;
+	public static final double OMISION_CONSUMO_MEDIO = 5;
+	public static final double OMISION_CAPACIDAD = 50;
+	
+	//Atributos de clase
+	private static double distanciaTotal;
+	private static double consumoTotal;
+	private static int numVehEncendido;
+	
+	private final double capacidadDeposito ;
+	private final double consumoMedio ;
+	
+	//Van cambiando
+	private boolean encendido;
+	private double nivelDeposito;
+	private double cantidadKm;
+	private double consumoRealizado;
+	private double totalKm;
+	private double consumoTotalRealizado;
+	
+	//Constructores
+	public Vehiculo(double capacidadDeposito, double consumoMedio) throws IllegalArgumentException {
+		if(capacidadDeposito < CAPACIDAD_MINIMA_DEPOSITO || capacidadDeposito >CAPACIDAD_MAXIMA_DEPOSITO)  {
+			throw new IllegalArgumentException("La capacidad del Deposito debe estar entre los 10 y los 120 litros");
+		} if (consumoMedio < CONSUMO_MINIMO_MEDIO && consumoMedio > CONSUMO_MAXIMO_MEDIO) {
+			throw new IllegalArgumentException("El consumo medio debe estar entre 2 y 20 litros");
+	};
+	
+		this.capacidadDeposito = capacidadDeposito;
+		this.consumoMedio = consumoMedio;
+		
+		
+	}
+	
+	
+
+	
+}

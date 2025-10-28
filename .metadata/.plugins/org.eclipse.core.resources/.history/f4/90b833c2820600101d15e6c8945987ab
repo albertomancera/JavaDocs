@@ -1,0 +1,21 @@
+/*
+ * Objetivo: Crear la clase Acuatico
+ * Autor: Álvaro Mozo Gaspar
+ * Fecha: 03/03/2025
+ */
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public abstract class Acuatico extends Vehiculo {
+
+    protected final double eslora;
+
+    public Acuatico(String matricula, String modelo, LocalDate fechaFabricacion, double eslora) {
+		super(matricula, modelo, fechaFabricacion);
+		this.eslora = eslora;
+	}
+
+   }
+
+

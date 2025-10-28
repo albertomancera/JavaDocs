@@ -1,0 +1,21 @@
+package ejercicio2;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		/*
+		int num=1;
+		
+		for(num=1; num<=35;num++ ) {
+			System.out.println(num);
+		}
+*/
+		
+		int cont=200;
+		
+		while(cont<=250) {
+			cont =+2;
+			Ssytem.out.println(cont);
+		}
+	}
+}

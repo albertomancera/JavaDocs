@@ -1,0 +1,32 @@
+package ejercicio5;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Alumno {
+	// Atributos de clase constantes
+			public static final int NUMERO_MAXIMO_ALUMNOS = 800;
+			public static final int NUM_MAX_ALUMNOS_GRUPO = 30;
+			public static final int NUM_MIN_ALUMNOS_GRUPO = 5;
+			public static final LocalTime HORA_MAX_ESTANCIA_CENTRO = LocalTime.of(20,0);
+			public static final LocalDate fechaNacimiento_DEFAULT = LocalDate.of(2000,01,01) ;
+			
+			//Atributos de clase variables
+			static int numeroAlumnos;
+			
+			String dni;
+			String nombre;
+			String apellidos;
+			LocalDate fechaNacimiento;
+			double altura;
+			boolean esMayorEdad;
+			int numeroHermanos;
+			LocalTime horaMaxEstancia;
+			
+			public Alumno (String dni, String nombre, String apellidos) {
+				this.dni = dni;
+				this.nombre = dni;
+				this.apellidos = apellidos;
+			}
+}
+

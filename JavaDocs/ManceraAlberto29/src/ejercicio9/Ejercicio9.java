@@ -1,0 +1,24 @@
+package ejercicio9;
+import java.util.*;
+
+public class Ejercicio9 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		int num ;
+		int suma = 0;
+		double producto =1;
+		
+		for(int i = 0; i<10;i++) {
+			System.out.println("Dime un número natural: ");
+			num=entradaTeclado.nextInt();
+			
+			suma +=num;
+			producto *=num;
+			
+			}
+		System.out.println("La suma de estos números es: "+suma);
+		System.out.println("El producto de estos números es: "+producto);
+
+	}
+}

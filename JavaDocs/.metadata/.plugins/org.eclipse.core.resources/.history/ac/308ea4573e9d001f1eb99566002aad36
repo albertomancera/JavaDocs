@@ -1,0 +1,21 @@
+package metodos;
+import java.util.*;
+
+public class Metodos {
+	public static void main (String [] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+
+		int nota;
+		
+		nota = notaAleatoria();
+		System.out.println(nota);
+	}
+	//Devuelve una nota entre 0 y 10
+	public static int notaAleatoria() {
+		int nota;
+		nota = (int) Math.ceil(Math.random()*10);
+		return nota;
+	}
+	
+	
+}

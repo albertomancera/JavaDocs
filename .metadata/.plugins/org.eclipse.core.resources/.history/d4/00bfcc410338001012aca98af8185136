@@ -1,0 +1,33 @@
+package examen;
+
+import java.time.LocalDate;
+
+public class Lanchas extends Embarcacion{
+	
+	public static final int POTENCIA_DEFECTO = 80;
+	//Atributos de objeto
+	private int potencia_motor;
+	
+
+	public Lanchas(String matricula, LocalDate fecha_construccion, int eslora, int num_pasajeros, boolean base_puerto,
+			int potencia_motor) throws IllegalArgumentException {
+		super(matricula, fecha_construccion, eslora, num_pasajeros, base_puerto);
+		this.potencia_motor = potencia_motor;
+	}
+
+	public Lanchas() {
+		this(MATRICULA_DEFECTO, FECHA_ACTUAL, POTENCIA_DEFECTO, POTENCIA_DEFECTO, BASE_PUERTO_DEFECTO, POTENCIA_DEFECTO);
+	}
+
+
+	@Override
+	public String toString() {
+		return "Lanchas [potencia_motor=" + potencia_motor + ", matricula=" + matricula + ", fecha_construccion="
+				+ fecha_construccion + ", eslora=" + eslora + ", num_pasajeros=" + num_pasajeros + ", base_puerto="
+				+ base_puerto + "]";
+	}
+	
+
+	
+	
+}

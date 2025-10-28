@@ -1,0 +1,21 @@
+/*
+ * Objetivo: Crear la clase Avion
+ * Autor: Álvaro Mozo Gaspar
+ * Fecha: 03/03/2025
+ */
+package ejercicio5;
+
+public class Avion extends Aereo {
+
+	private int tiempoMaxVuelo;
+
+    public Avion(String matricula, String modelo, int asientos, int tiempoMaxVuelo) {
+        super(matricula, modelo, asientos);
+        this.tiempoMaxVuelo = tiempoMaxVuelo;
+    }
+
+    public String toString() {
+        return String.format("Avión [Matrícula: " + matricula + ", Modelo: " + modelo + ", Asientos: " + asientos + ", Tiempo Máximo de Vuelo: " + tiempoMaxVuelo + " horas]");
+    }
+
+}

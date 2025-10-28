@@ -1,0 +1,5 @@
+package mobiliario;
+
+public class Mesa extends Mueble{
+
+}

@@ -1,0 +1,11 @@
+package poo;
+
+public class Principal {
+
+	try {
+		Persona p = new Persona ("Fernando", "Lopez", -5);
+	}catch (IllegalArgumentException e) {
+		System.out.println(e.getMessage());
+	}
+}
+}

@@ -1,0 +1,45 @@
+package operArrayList;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PrincipalArrayList {
+
+	public static void main(String[] args) {
+		ArrayList<Estudiante> lista;
+		lista = importarDatos();
+		
+		System.out.println("Número de registros: "+ lista.size());
+
+	}
+
+	private static ArrayList<Estudiante> importarDatos() {
+		File f = new File("nota1.txt");
+		ArrayList<Estudiante> e1 = new ArrayList<>();
+		
+		try {
+			Scanner lector = new Scanner(f);
+		
+			while(lector.hasNext()) {
+				String linea = lector.nextLine();
+				String [] partes = linea.split(";");
+				String grupo = partes[0];
+				String nombre = partes[1];
+				int matematicas = Integer.parseInt(partes[2]);
+				int lengua = Integer.parseInt(partes[3]);
+				int fisica = Integer.parseInt(partes[4]);
+				int quimica = Integer.parseInt(partes[5]);
+				int ingles = Integer.parseInt(partes[6]);
+				
+				Estudiante estudiante = new Estudiante(grupo,nombre,matematicas,lengua,fisica,quimica,ingles);
+				e1.add(estudiante);
+			}
+			lector.close();
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return e1;
+	}
+}

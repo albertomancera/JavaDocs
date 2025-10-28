@@ -1,0 +1,27 @@
+/*
+ * Objetivo: Almacenar y mostrar datos de un array (la media de ellos)
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio5;
+import java.util.*;
+
+public class Ejercicio5 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		double media=0;
+		int suma = 0;
+		
+		
+		double num[]= new double[20];
+		for(int i=0; i<20; i++) {
+			System.out.println("Dime un número entero: ");
+			num[i]= entradaTeclado.nextInt();
+			
+			 suma +=num[i];
+			 media = suma/num.length;
+		}
+		System.out.println("La media de estos números es: "+media);
+	}
+}

@@ -1,0 +1,17 @@
+package mobiliario;
+
+public abstract class Mueble {
+
+	protected final int identificador = 0;
+	protected final double precio;
+	protected String descripcion;
+	
+	public Mueble(double precio, String descripcion) {
+		this.identificador++;
+		this.precio = precio;
+		this.descripcion = descripcion;
+	}
+	
+	
+	
+}

@@ -1,0 +1,25 @@
+
+package ejecicio1;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		double a  ,b ;
+		
+		
+		System.out.println("Dime un número: ");
+		a = sc.nextDouble();
+		
+		System.out.println("Dime otro número: ");
+		b = sc.nextDouble();
+		
+		System.out.println("El resultado de la multiplicación es: "+ multiplica(a, b));
+		
+	}
+	//Devuelve la multiplicación de dós números
+	public static double multiplica(double a, double b) {
+	return a*b;
+}
+}

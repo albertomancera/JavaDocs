@@ -1,0 +1,34 @@
+package examen;
+
+import java.io.File;
+
+public class PrincipalExamen {
+
+	public static void main(String[] args) {
+		/*1. Importa desde documentos de texto (diseñados por ti)
+		al menos tres embarcaciones de cada tipo.*/
+		
+		
+		//2. Genera 10 veleros con valores por defecto con fecha de construcción cuyo año sea un
+		//valor aleatorio entre 2000 y 2050.
+		Velero[] veleros = new Velero[10];
+		for(int i = 0; i<veleros.length; i++) {
+			try {
+				veleros[i] = new Velero(Embarcacion.MATRICULA_DEFECTO,Embarcacion.FECHA_ACTUAL,Embarcacion.ESLORA_DEFECTO,
+						Embarcacion.NUM_PASAJEROS_DEFECTO,Embarcacion.BASE_PUERTO_DEFECTO,Velero.NUM_MASTILES_DEFECTO );
+				System.out.println(veleros[i]);
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+
+	public static int obtenerNumeroAleatorio() {
+        // Math.random() devuelve un valor entre 0.0 (inclusive) y 1.0 (exclusivo)
+        // Multiplicamos por 301 para obtener un rango de 0 a 300
+        // Luego restamos 150 para moverlo al rango de -150 a 150
+		int anno = (int)(Math.random() * 2100) - 50;
+        return anno;
+    }
+}
+

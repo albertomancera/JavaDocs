@@ -1,0 +1,11 @@
+/*
+ * Objetivo: Almacenar y mostrar datos de un array 
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio10;
+import java.util.*;
+
+public class Ejercicio10 {
+
+}

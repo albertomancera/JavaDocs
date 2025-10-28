@@ -1,0 +1,32 @@
+package mobiliario;
+
+public final class Armario extends Almacenaje {
+	//Atributos de clase constante
+	public final static int MIN_PUERTAS = 1;
+	public final static int MAX_PUERTAS = 6;
+	
+	//Atributos de objeto
+	private int numPuertas;
+	
+	//Constructores
+	public Armario (double precio, String descripcion, double anchura, double altura, int numMaxModulos, int numPuertas) throws IllegalArgumentException {
+		super(precio, descripcion, anchura, altura, numMaxModulos);
+		if(numPuertas<Armario.MIN_PUERTAS || numPuertas>Armario.MAX_PUERTAS) {
+			throw new IllegalArgumentException("No se puede crear el Armario. El número de puertas no está en el rango permitido: "+numPuertas);
+		}
+		
+		this.numPuertas = numPuertas;
+	}
+
+	//Métodos
+	public int getNumPuertas() {
+		return numPuertas;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%-14s Número de puertas:%2d", 
+				super.toString(),
+				this.getNumPuertas());
+	}
+}

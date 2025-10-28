@@ -1,0 +1,42 @@
+package mobiliario;
+
+public class Asiento extends Mueble {
+	public static final int MIN_PLAZAS = 1;
+	public static final int MAX_PLAZAS= 9;
+	
+	private final int numAsientos;
+	private final String tapiceria;
+	private final String color;
+	
+	public Asiento(double precio, String descripcion, int numAsientos, String tapiceria, String color)
+			throws IllegalArgumentException {
+		super(precio, descripcion);
+		if(numAsientos < MIN_PLAZAS  || numAsientos > MAX_PLAZAS) {
+			throw new IllegalArgumentException("El número de plazas no está en el rango permitido: " + numAsientos);
+		}
+	
+		this.numAsientos = numAsientos;
+		this.tapiceria = tapiceria;
+		this.color = color;
+	}
+
+	public int getNumPlazas() {
+		return numAsientos;
+	}
+
+	public String getTapiceria() {
+		return tapiceria;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " Tapicería: " + this.getTapiceria() + " Color: " + this.getColor() + " Núm plazas: " + this.getNumPlazas();
+	}
+	
+	
+	
+}

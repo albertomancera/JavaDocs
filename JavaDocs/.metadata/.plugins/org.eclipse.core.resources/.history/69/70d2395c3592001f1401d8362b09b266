@@ -1,0 +1,14 @@
+/*
+ * Objetivo: Programa que lea números no nulos
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 22/10/2024
+ */
+package ejercicio6;
+
+
+public class Ejercicio6 {
+	public static void main(String args[]) {
+		
+		
+	}
+}

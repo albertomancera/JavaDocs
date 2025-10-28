@@ -1,0 +1,25 @@
+package array;
+import java.util.*;
+
+public class Arraybidimensional {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+	int alumnos=5;
+	int modulos=3;
+	
+	int [][]arrayBidimensional = new int [alumnos][modulos];
+	
+	for (int i=0; i < arrayBidimensional.length; i++ )
+		 for (int j=0;j< arrayBidimensional[i].length;j++)
+		        arrayBidimensional[i][j] = i + j  ;
+		 
+	for (int i=0; i< arrayBidimensional.length; i++) {
+	    for (int j=0;j< arrayBidimensional[i].length;j++) {
+	        System.out.print ("[" + i + "][" + j + "] = " + arrayBidimensional[i][j] + "    ") ;
+	    }
+	    System.out.println() ;
+		 }
+	}
+}
+

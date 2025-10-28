@@ -1,0 +1,26 @@
+package ejercicio10;
+import java.util.Scanner;
+
+public class Ejercicio10 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		int dia, mes ,anno;
+		
+		System.out.println("Introduce el día: ");
+		dia = sc.nextInt();
+		
+		System.out.println("Introduce el mes: ");
+		mes = sc.nextInt();
+		
+		System.out.println("Introduce el año");
+		anno = sc.nextInt();
+
+	}
+	//
+	public static boolean fechacorrecta(int  dia, int mes, int  anno) {
+	
+		
+	
+	}
+}

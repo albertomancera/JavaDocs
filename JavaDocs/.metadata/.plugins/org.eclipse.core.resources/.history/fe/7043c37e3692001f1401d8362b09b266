@@ -1,0 +1,32 @@
+/*
+ * Objetivo: Programa que lea números no nulos
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 22/10/2024
+ */
+package ejercicio6;
+
+import java.util.Scanner;
+
+public class Ejercicio6 {
+	public static void main(String args[]) {
+			Scanner entradaTeclado = new Scanner(System.in);
+			
+		int num;
+		int contador=0;
+		
+		for (int i = 0; i<10; i++) {
+			System.out.println("Dime un número entero: ");
+			num= entradaTeclado.nextInt();
+			while(num==0) {
+				contador++;
+				System.out.println("Error, porfavor introduce un número valido.");
+			}
+		}
+		if (contador>0) {
+			System.out.println("Se ha ingresado al menos un número negativo");
+		}else {
+			System.out.println("No se ha ingreasdo ningún número negativo");
+		}
+		
+	}
+}

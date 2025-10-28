@@ -1,0 +1,68 @@
+package cursoholamundo;
+
+public class CursoHolaMundp {
+
+	public static void main(String[] args) {
+		byte edad=18;
+		double edad1= 15.5;
+		boolean activo= false;
+		char curso = 'A';
+		
+		String text="Hola mundo";
+		String texto = text.replace("Hola", "Chao");
+		int largo = text.length();
+		
+		System.out.println("Hola mundo");
+		System.out.println(edad);
+		System.out.println(activo);
+		System.out.println(curso);
+		System.out.println(largo);
+		System.out.println(text);
+		System.out.println(texto);
+		System.out.println(texto.endsWith("do"));
+		System.out.println(texto.startsWith("Hola"));
+		System.out.println(texto.contains("und"));
+		System.out.println(texto.indexOf("mund"));
+		
+		System.out.println(texto.toUpperCase());
+		System.out.println(texto.toLowerCase());
+		
+		String malo= "    chanchito feliz   ";
+		System.out.println(malo.trim());
+
+		String texto1 = "C:\\Hola \"mundo\">";
+		String texto2 = "Hola \n mundo";
+		System.out.println(texto1);
+		System.out.println(texto2);
+
+		/*Variables y tipos de datos:
+		 * -Numeros enteros:
+			 * ->int = -2MM ->2MM	4bytes
+			 * ->byte = -128 ->127	1byte
+			 * ->short =  -32768->32767	2bytes
+			 * ->long = -9..000...->9..000...	8bytes
+		 * Numeros decimales
+			 * ->float
+			 * ->double
+		 * 	Boolean = true o false
+		 * 	char = a-zA-Z
+		 * 
+		 * Metodos de Srting
+			 * ->lenght() = longitud del string
+			 * ->replace() = cambiar el texto
+			 * ->endsWith() = si acaba por esas letras
+			 * ->startsWith() = si empieza por esas letras
+			 * ->contains() = si contiene estas letras
+			 * ->indexOf() = donde empieza esta letra
+			 * ->toUpperCase() = todo en MAYUSCULA
+			 * ->toLowerCase() = todo en minuscula
+			 * ->trim() = quitar los espacios 
+			 * 
+		 * Caracteres de escape 
+		 * -> \n = nueva linea
+		 * -> \t  = tabulacion
+		 */
+		
+	}
+
+}

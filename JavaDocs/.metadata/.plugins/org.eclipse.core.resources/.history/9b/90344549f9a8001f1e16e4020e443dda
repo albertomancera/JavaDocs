@@ -1,0 +1,17 @@
+package ejercicio2;
+import java.util.Scanner;
+
+public class Ejercicio2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+	String cad1;
+	
+	do {
+		System.out.println("Dime una cadena de texto (para salor introduce \"fin\" o 10 cadenas: ");
+		cad1= sc.nextLine();
+	}while(cad1.equalsIgnoreCase("fin"));
+		
+	}
+
+}

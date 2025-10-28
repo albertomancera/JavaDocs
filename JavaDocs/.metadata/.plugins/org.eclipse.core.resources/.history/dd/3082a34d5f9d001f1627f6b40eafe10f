@@ -1,0 +1,141 @@
+package cursoholamundo;
+import java.util.*;
+import java.util.Arrays;
+
+public class CursoHolaMundp {
+
+	public static void main(String[] args) {
+		byte edad=18;
+		double edad1= 15.5;
+		boolean activo= false;
+		char curso = 'A';
+		
+		String text="Hola mundo";
+		String texto = text.replace("Hola", "Chao");
+		int largo = text.length();
+		
+		System.out.println("Hola mundo");
+		System.out.println(edad);
+		System.out.println(activo);
+		System.out.println(curso);
+		System.out.println(largo);
+		System.out.println(text);
+		System.out.println(texto);
+		System.out.println(texto.endsWith("do"));
+		System.out.println(texto.startsWith("Hola"));
+		System.out.println(texto.contains("und"));
+		System.out.println(texto.indexOf("mund"));
+		
+		System.out.println(texto.toUpperCase());
+		System.out.println(texto.toLowerCase());
+		
+		String malo= "    chanchito feliz   ";
+		System.out.println(malo.trim());
+
+		String texto1 = "C:\\Hola \"mundo\">";
+		String texto2 = "Hola \nmundo";
+		System.out.println(texto1);
+		System.out.println(texto2);
+		
+		//Arrays
+		int [] numeros = new int[5]; // int [] numeros = {0,1,2,3,4};
+ 		numeros[0] = 5; //darle valores
+		numeros[4] = 100;
+		System.out.println(numeros);
+		System.out.println(Arrays.toString(numeros)); //mostrarse en tabla
+		System.out.println(numeros.length); //longitud
+		Arrays.sort(numeros); //ordenar
+		System.out.println(Arrays.toString(numeros));
+
+		//Arrays multidimensionales
+		int [][][] num = new int [3][2][2];
+		num[0][0][0]  = 5;
+		System.out.println(Arrays.deepToString(num));
+		
+		//Constantes = no pueden cambiar
+		final String empresa = "Hola Mundo Limited";
+		//empresa = "Chanchito feliz"; no puede cambiar
+		System.out.println(empresa);
+		
+		//Comentarios
+			//Esto es un comentario de una línea
+		/*
+		 * Comentario de varias lineas
+		 */
+		 int a = 2+2;
+		 int b = 2-2;
+		 int c = 3*3;
+		 int resto = 3%3;
+		 double d = 10.0/ 3.0;
+	
+		 System.out.println(resto);
+		 System.out.println(d);
+		 
+		 int x =5;
+		 //++x;
+		 //--x;
+		 x +=5;
+		 
+		 System.out.println(x);
+		 
+		 /*Orden de las operaciones
+		  * parentesis
+		  * potencia
+		  * multiplicación
+		  * division
+		  * suma
+		  * resta
+		  */
+		 
+		 int r = (5+3)* 2;
+		 System.out.println(r);
+		 
+		//Conversion de tipos
+		 double z= 1.08;
+		 int y = 5;
+		 int ww= (int)z+y;
+		 System.out.println(ww);
+		 
+		 String j= "1.1";
+		 int k= 5;
+		 double l= Double.parseDouble(j)+ k;
+		 System.out.println(l);
+		 
+		/*Variables y tipos de datos:
+		 * -Numeros enteros:
+			 * ->int = -2MM ->2MM	4bytes
+			 * ->byte = -128 ->127	1byte
+			 * ->short =  -32768->32767	2bytes
+			 * ->long = -9..000...->9..000...	8bytes
+		 * Numeros decimales
+			 * ->float
+			 * ->double
+		 * 	Boolean = true o false
+		 * 	char = a-zA-Z
+		 * 
+		 * Metodos de Srting
+			 * ->lenght() = longitud del string
+			 * ->replace() = cambiar el texto
+			 * ->endsWith() = si acaba por esas letras
+			 * ->startsWith() = si empieza por esas letras
+			 * ->contains() = si contiene estas letras
+			 * ->indexOf() = donde empieza esta letra
+			 * ->toUpperCase() = todo en MAYUSCULA
+			 * ->toLowerCase() = todo en minuscula
+			 * ->trim() = quitar los espacios 
+			 * 
+		 * Caracteres de escape 
+		 * -> \n = nueva linea
+		 * -> \t  = tabulacion
+		 * 	
+		 *Clases Math
+		 *->Math.abs = Da el número absoluto
+		 *->Math.ceil == Redondea hacia arriba
+		 *->Math.floor == Redondea hacia abajo
+		 *->Math.max == Da el número mas alto
+		 *->Math.min == Da el número mas pequeño
+		 */
+		
+	}
+
+}

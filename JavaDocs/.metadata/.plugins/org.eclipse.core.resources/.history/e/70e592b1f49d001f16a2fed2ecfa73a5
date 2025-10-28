@@ -1,0 +1,17 @@
+package metodos;
+import java.util.Scanner;
+
+public class Ejemplo2 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		int num;
+		
+		System.out.println("Dime números enteros: ");
+		num = entradaTeclado.nextInt();
+		
+	}
+	//Comprobar si es multiplo de 5
+	public static int devolverresto(int num) {
+		return num%5;
+	}
+}

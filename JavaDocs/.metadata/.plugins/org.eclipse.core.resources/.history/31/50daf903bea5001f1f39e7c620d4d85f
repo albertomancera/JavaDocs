@@ -1,0 +1,19 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		int num;
+		
+		do {
+			System.out.println("Introduce números por teclado (Se termina cuando introduzcas un número impar): ");
+			num = sc.nextInt();
+		}while(num%2==1);
+		
+		
+	}
+
+}

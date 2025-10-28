@@ -1,0 +1,10 @@
+package aplicaciondeterminal;
+
+public class AplicacionTerminal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

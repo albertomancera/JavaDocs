@@ -1,0 +1,14 @@
+package ejercicio1;
+import java.util.*;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+	
+		String cadena;
+		
+		System.out.println("Dame una cadena de texto");
+		cadena= entradaTeclado.nextLine();
+	}
+}
+	

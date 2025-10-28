@@ -1,0 +1,14 @@
+package ejerciciosBasicos;
+
+import java.util.Scanner;
+
+public class Pizzeria {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		String tipoPizza;
+
+	}
+
+}

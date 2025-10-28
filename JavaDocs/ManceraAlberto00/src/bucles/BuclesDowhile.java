@@ -1,0 +1,29 @@
+  package bucles;
+  import java.util.*;
+  
+public class BuclesDowhile {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		//Do-while para que se ejecute por lo menos una vez
+		
+int aleatorio=(int)(Math.random()*10);
+		
+		int num=0;
+		int intentos=0;
+		
+		 do{
+			intentos++;
+			System.out.println("Dime un número: ");
+			num=entradaTeclado.nextInt();
+		}while(num !=aleatorio) ;
+		
+		 if(aleatorio<num) {
+		 System.out.println("Correcto. Lo has conseguido en "+intentos+" intentos");
+		 }
+		 
+	}
+}	
+	
+	
+

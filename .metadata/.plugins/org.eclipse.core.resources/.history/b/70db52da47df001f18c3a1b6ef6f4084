@@ -1,0 +1,12 @@
+package herencia;
+
+public class Analista extends Trabajador {
+	public static final String LENGUAJE_DEFAULT = "Java";
+	public static final int ANNOSEXP_DEFAULT = 0;
+	public static final boolean JEFEEQUIPO_DEFAULT = false;
+	
+	protected String lenguajesProg;
+	protected int annosExp;
+	protected boolean esJefeEquipo;
+	
+}

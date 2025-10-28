@@ -1,0 +1,11 @@
+package examen;
+
+import java.time.LocalDate;
+
+public class Velero extends Embarcacion {
+	
+	//Atributos de objeto
+			private int num_mastiles;
+	
+			
+}

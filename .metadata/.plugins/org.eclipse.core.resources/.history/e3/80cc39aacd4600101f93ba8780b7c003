@@ -1,0 +1,30 @@
+package mobiliario;
+
+public final class  Silla extends Asiento implements Ajustable {
+	public static final int MIN_POSICION = 1;
+	public static final int MAX_POSICION = 4;
+
+
+	private int posicionRespaldo;
+
+
+	public Silla(double precio, String descripcion, String tapiceria, String color) throws IllegalArgumentException {
+		super(precio, descripcion, Asiento.MIN_PLAZAS, tapiceria, color);
+		this.posicionRespaldo = MIN_POSICION;
+	}
+	
+	public int getPosicionRespaldo() {
+		return posicionRespaldo;
+	}
+
+	
+	
+
+	@Override
+	public String toString() {
+		return super.toString() +  " Posicion Respaldo: " + getPosicionRespaldo() ;
+	}
+
+	
+	
+}

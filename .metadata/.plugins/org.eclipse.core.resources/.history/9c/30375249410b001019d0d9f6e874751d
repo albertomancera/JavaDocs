@@ -1,0 +1,55 @@
+package operArrayList;
+
+public class ArrayList {
+	//Atributos
+	private String grupo;
+	private String nombre;
+	private int matematicas;
+	private int lengua;
+	private int fisica;
+	private int quimica;
+	private int ingles;
+	
+	//Constructor
+	public ArrayList(String grupo, String nombre, int matematicas, int lengua, int fisica, int quimica, int ingles) {
+		this.grupo = grupo;
+		this.nombre = nombre;
+		this.matematicas = matematicas;
+		this.lengua = lengua;
+		this.fisica = fisica;
+		this.quimica = quimica;
+		this.ingles = ingles;
+	}
+	
+	//Getter y SETTER
+	
+	public String getGrupo() {
+		return grupo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getMatematicas() {
+		return matematicas;
+	}
+
+	public int getLengua() {
+		return lengua;
+	}
+
+	public int getFisica() {
+		return fisica;
+	}
+
+	public int getQuimica() {
+		return quimica;
+	}
+
+	public int getIngles() {
+		return ingles;
+	}	
+
+	
+}

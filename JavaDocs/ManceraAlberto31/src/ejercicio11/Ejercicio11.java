@@ -1,0 +1,27 @@
+/*
+  * Objetivo: Almacenar y mostrar datos de 2 arrays 
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio11;
+
+public class Ejercicio11 {
+	public static void main(String args[]) {
+		
+		int array[]= new int[100];
+		int array2[]=new int[100];
+		
+		for (int i=0; i<array.length;i++) {
+			array[i]=i + 1;
+		}
+		for (int i=0; i<array.length;i++) {
+			array2[i]=(array.length - i);
+		}
+		for (int i=0; i<array.length;i++) {
+			System.out.print(+array[i]);
+		}
+		for (int i=0; i<array.length;i++) {
+			System.out.print(+array2[i]);
+		}
+	}
+}

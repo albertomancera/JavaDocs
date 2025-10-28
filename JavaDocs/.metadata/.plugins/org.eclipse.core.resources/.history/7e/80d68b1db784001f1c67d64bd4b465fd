@@ -1,0 +1,41 @@
+/*
+ * Objetivo:Calcular el salario neto y solicitar datos
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 04/10/2024
+ */
+package ejercicio1;
+
+import java.util.*;
+
+public class Ejercicio1 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		String nombre;
+		System.out.println("Dime tu nombre");
+		nombre = entradaTeclado.nextLine();
+		
+		String apellidos;
+		System.out.println("Dime tu apellido");
+		apellidos = entradaTeclado.nextLine();
+		
+		String fechanacimiento;
+		System.out.println("Dime tu fecha de nacimiento");
+		fechanacimiento = entradaTeclado.nextLine();
+		
+		double salariobruto;
+		System.out.println("Dime tu salario bruto");
+		salariobruto = entradaTeclado.nextDouble();
+		
+		int annos;
+		System.out.println("Dime tus años trabajando en la empresa");
+		annos = entradaTeclado.nextInt();
+		
+		double salarioneto;
+		salarioneto = (salariobruto*0.15 ) ; 
+		
+		System.out.println("Estimad@ " + nombre + " " + apellidos)  ;
+		System.out.println();
+	
+	}
+}

@@ -1,0 +1,34 @@
+/*
+ * Objetivo: Almacenar y mostrar datos de un array (maximo y minimo)
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio3;
+import java.util.*;
+
+public class Ejercicio3 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		int maximo=0;
+		
+		
+		int num[]= new int[10];
+		int minimo = num[0];
+		for (int i=0; i<10; i++) {
+			System.out.println("Dime un número real: ");
+			num[i]= entradaTeclado.nextInt();
+			
+			if (num[i]>maximo) {
+				maximo = num[i];
+			}
+			if (num[i]<minimo) {
+				minimo = num[i];
+				}
+			}
+		
+			System.out.println("El máximo de estos números es: "+maximo);	
+			System.out.println("El mínimo de estos números es: "+minimo);
+		
+	}
+}

@@ -1,0 +1,62 @@
+package examenT1parcial;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+	//Array con los 50 números proporcionados
+	int[] numeros = {
+			 139, 103, 151, 114, 153, 28, 64, 7, 151, 66,
+	            35, 53, 86, 121, 169, 44, 126, 23, 197, 75,
+	            10, 3, 95, 55, 183, 98, 149, 91, 174, 125,
+	            200, 37, 138, 174, 5, 10, 115, 146, 2, 47,
+	            192, 71, 161, 129, 185, 82, 102, 32, 11, 71
+	};
+	
+	//Mostrar los valor (10 por linea)
+	System.out.println("Numeros almacenados: ");
+		for(int i = 0; i < numeros.length; i++) {
+			System.out.println(numeros[i]);
+			if((i+1) % 10 == 0) { //si i + 1 / 10 es 0 saltamos de pagina
+				System.out.println(); //salto de linea cada 10 numeros
+			}
+		}
+	
+	//Inicializacion de variables
+		int mayor = numeros[0] /*Se asume que el primer número por ahora del array es el mayor */, posMayor = 0;
+		int menor = numeros[0] /*Se asume que el primer número por ahora del array es el menor */, posMenor = 0;
+		int contador_0_100 = 0;
+		int contador_100_200= 0;
+		int suma_100_200 = 0;
+	
+		for(int i = 0; i < numeros.length; i++) {
+			int num = numeros[i]; //Toma el numero actual para trabajar mas comodo
+			
+			if(num > mayor) {
+				mayor = num; //Se actualiza mayor con este valor
+				posMayor = i;//Se actualiza posMayor con su posicion del numero
+			}
+			
+			if(num < menor) {
+				menor = num;//Se actualiza menor con este valor
+				posMenor = i;//Se actualiza posMenor con su posicion del numero
+			}
+			
+			if(num >= 0 && num <=100) {
+				contador_0_100++;
+			}
+			
+			if(num >= 100 && num <=200) {
+				suma_100_200 +=num;
+				contador_100_200++;
+			}
+		}
+		
+		if(contador_100_200 > 0) {
+			double media = (double) suma_100_200 / contador_100_200;
+			System.out.println("Media de valores entre 100 y 200: "+ media);
+		}else {
+			System.out.println("No hay valores entre 100 y 200");
+		}
+		
+		
+	}
+}

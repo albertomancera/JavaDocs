@@ -1,0 +1,117 @@
+package examenT1;
+
+import java.util.Scanner;
+
+public class Pluviametria {
+
+	public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+		
+		//A)Para cada municipio¿Que dia fue el más lluvioso 
+		System.out.println("A)");
+			System.out.println(mostrarDiaMaslluviosoPorMunicipio);;
+			mostrarMunicipiosMasLLuviosoPorDia();
+		    mostrarDiaMasLluviosoTotal();
+
+		    
+		    System.out.println(" Consulta personalizada:");
+		    System.out.print("Introduce nombre del municipio (en MAYÚSCULAS): ");
+		    String municipio = sc.nextLine();
+		    System.out.println("Introduce el día (entre 16 y 31): ");
+		    int dia = sc.nextInt();
+
+		    consultarLluviaPorDiaYMunicipio(municipio, dia);
+		
+
+	};
+
+	//Lista de municipios
+			static String[] municipios = {
+					  "MIJAS", "JUBRIQUE", "PUJERRA", "OJEN", "MÁLAGA",
+			            "RONDA", "COÍN", "TORROX", "ARDALES", "MARBELLA"
+			        };
+			
+			//Matriz con los datos de lluvias del dia 16 al 31
+			static int[][] datos = {
+					 	{0, 31, 1, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 33, 42, 22},
+			            {24, 56, 7, 0, 0, 0, 0, 0, 0, 0, 2, 12, 2, 10, 30, 29},
+			            {17, 22, 5, 0, 0, 0, 0, 0, 0, 1, 2, 9, 1, 13, 36, 32},
+			            {2, 41, 2, 0, 0, 0, 0, 0, 0, 0, 1, 7, 0, 11, 13, 32},
+			            {0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 11, 58, 3},
+			            {18, 8, 2, 0, 0, 0, 0, 0, 0, 0, 0, 11, 1, 7, 50, 36},
+			            {1, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 17, 35, 64},
+			            {7, 3, 1, 0, 0, 0, 0, 0, 0, 0, 5, 7, 0, 26, 23, 0},
+			            {3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 4, 7, 130, 43},
+			            {4, 33, 1, 0, 0, 0, 0, 0, 0, 0, 4, 2, 0, 10, 20, 31}
+			        };
+			
+		public static void mostrarDiaMaslluviosoPorMunicipio(){
+		for(int i = 0; i < datos.length; i++) {
+			int maxLluvia = datos[i][0];
+			int dia = 16;
+			
+		for(int j = 1;j < datos[i].length; j++) {
+			if(datos[i][j] > maxLluvia) {
+				maxLluvia = datos[i][j];
+				dia= 16 +j;
+			}
+			}
+		}
+		}
+		
+		public static void mostrarMunicipiosMasLLuviosoPorDia(){
+			for(int j = 0;j <datos[0].length; j++) {
+				int maxLluvia = datos[0][j];
+				int municipioIndex = 0;
+				for(int i = 1; i < datos.length; i++) {
+					if(datos[i][j] > maxLluvia) {
+						maxLluvia = datos[i][j];
+						municipioIndex = i;
+					}
+				}
+			}
+		}
+		
+		public static void mostrarDiaMasLluviosoTotal() {
+			int diaMasLluvioso = 16;
+			int maxTotal = 0;
+			
+			for (int j = 0; j < datos[0].length;j++) {
+				int sumaDia = 0;
+				for(int i = 0; i < datos.length; i++) {
+					sumaDia += datos[i][j];				}
+			
+			
+			if(sumaDia > maxTotal) {
+				maxTotal = sumaDia;
+				diaMasLluvioso = 16 + j;
+			}
+			}
+		}
+		
+		public static  void consultarLluviaPorDiaYMunicipio(String municipioBuscado, int diaBuscado) {
+			 int indiceMunicipio = -1;
+			    for (int i = 0; i < municipios.length; i++) {
+			        if (municipios[i].equals(municipioBuscado)) {
+			            indiceMunicipio = i;
+			            break;
+			        }
+			    }
+
+			    if (indiceMunicipio != -1 && diaBuscado >= 16 && diaBuscado <= 31) {
+			        int lluvia = datos[indiceMunicipio][diaBuscado - 16];
+			        System.out.print(" - En " + municipioBuscado + " el día " + diaBuscado);
+			        if (lluvia > 0) {
+			            System.out.println(" sí llovió (" + lluvia + " litros).");
+			        } else {
+			            System.out.println(" no llovió.");
+			        }
+			    } else {
+			        System.out.println(" Municipio o día incorrecto.");
+			    }
+			}
+		
+		
+	}
+
+

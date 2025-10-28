@@ -1,0 +1,59 @@
+package mobiliario;
+
+public final class Sillon extends Asiento implements Ajustable {
+	public static final int POS_BAJADO = 0;
+	public static final int POS_SUBIDO = 1;
+	
+	private int posicionSillon;
+
+	public Sillon(double precio, String descripcion, String tapiceria, String color,
+			int posicionSillon) throws IllegalArgumentException {
+		super(precio, descripcion, Asiento.MIN_PLAZAS, tapiceria, color);
+		this.posicionSillon = POS_SUBIDO;
+	}
+
+	public int getPosicionSillon() {
+		return posicionSillon;
+	}
+
+
+	@Override
+	public int obtenerPosicion() {
+		return getPosicionSillon();
+	}
+
+	@Override
+	public int subirPosicion() throws IllegalStateException {
+		posicionSillon++;
+		if (posicionSillon>POS_SUBIDO) {
+			posicionSillon--;
+			throw new IllegalStateException("Error: no se pueden subir los pies del sillón. Ya están subidos");
+		}
+		return posicionSillon;
+	}
+
+
+	@Override
+	public int bajarPosicion() throws IllegalStateException {
+		posicionSillon--;
+		if(posicionSillon<POS_BAJADO) {
+			posicionSillon++;
+			throw new IllegalStateException("Error: no se pueden bajar los pies del sillón. Ya están bajados");
+		}
+		return posicionSillon;
+	}
+	
+	
+	@Override
+	public String toString() {
+		if(posicionSillon == POS_SUBIDO) {
+			return super.toString() + " posicionSillon= Subido";
+		}else {
+			return super.toString() + " posicionSillon= Bajado";
+		}
+	}
+
+
+
+	
+}

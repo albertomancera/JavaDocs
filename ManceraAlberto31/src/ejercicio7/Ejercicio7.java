@@ -1,0 +1,24 @@
+/*
+ * Objetivo: Almacenar y mostrar datos de un array 
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio7;
+import java.util.*;
+
+public class Ejercicio7 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		System.out.println("Dime un número entero (P): ");
+		int p = entradaTeclado.nextInt();
+		
+		System.out.println("Dime un número entero (Q): ");
+		int q = entradaTeclado.nextInt();
+
+		int array[]= new int[0];
+		for(int i=p; i<=q; i++) {
+		System.out.println(i +" ");
+		}
+	}
+}

@@ -1,0 +1,66 @@
+package operArrayList;
+
+public class Estudiante {
+		//Atributos
+		private String grupo;
+		private String nombre;
+		private int matematicas;
+		private int lengua;
+		private int fisica;
+		private int quimica;
+		private int ingles;
+		
+		//Constructor
+		public Estudiante(String grupo, String nombre, int matematicas, int lengua, int fisica, int quimica, int ingles) {
+			this.grupo = grupo;
+			this.nombre = nombre;
+			this.matematicas = matematicas;
+			this.lengua = lengua;
+			this.fisica = fisica;
+			this.quimica = quimica;
+			this.ingles = ingles;
+		}
+		
+		//Getter y SETTER
+		
+		public String getGrupo() {
+			return grupo;
+		}
+
+		public String getNombre() {
+			return nombre;
+		}
+
+		public int getMatematicas() {
+			return matematicas;
+		}
+
+		public int getLengua() {
+			return lengua;
+		}
+
+		public int getFisica() {
+			return fisica;
+		}
+
+		public int getQuimica() {
+			return quimica;
+		}
+
+		public int getIngles() {
+			return ingles;
+		}
+
+		public double calcularNotaMedia() {
+	        return (matematicas + lengua + fisica + quimica + ingles) / 5.0;
+	    }
+		
+		@Override
+		public String toString() {
+			return "Estudiante [grupo=" + grupo + ", nombre=" + nombre + ", matematicas=" + matematicas + ", lengua="
+					+ lengua + ", fisica=" + fisica + ", quimica=" + quimica + ", ingles=" + ingles + "]";
+		}	
+
+		
+}
+

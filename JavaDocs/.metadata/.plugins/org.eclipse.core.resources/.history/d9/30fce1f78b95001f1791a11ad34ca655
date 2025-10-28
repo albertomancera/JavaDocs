@@ -1,0 +1,21 @@
+package ejercicio4;
+import java.util.*;
+
+public class Ejercicio4 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+	
+		int alumnos=4, asignatura=5;
+		
+		int notas[][]= new int [alumnos][asignatura];
+		
+		for (int i=0; i<alumnos;i++) {
+			  System.out.println("Notas para Alumno " + (i + 1) + ":");
+			for (int j=0; j<asignatura; j++) {
+				System.out.print("  Asignatura " + (j + 1) + ": ");
+				notas[i][j]=entradaTeclado.nextInt();
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,111 @@
+Nombre: Godoy Barrionuevo, Antonio Jesús, Media: 1.0
+Nombre: González Pereau, Saray, Media: 5.0
+Nombre: González Pérez, Antonio, Media: 7.0
+Nombre: González Pérez, Laura, Media: 7.0
+Nombre: Gutiérrez Martín, Marina, Media: 1.0
+Nombre: Heredia Mesa, Pablo, Media: 4.0
+Nombre: Martínez Ruiz, Mónica, Media: 2.0
+Nombre: Peralta , Maximiliano, Media: 2.0
+Nombre: Plaza Gallego, Juan, Media: 1.0
+Nombre: Pérez Pellisero, Braian, Media: 5.0
+Nombre: Rielves Barea, Manuel, Media: 4.0
+Nombre: Rueda Cruz, María, Media: 5.0
+Nombre: Ruiz Jiménez, Rafael, Media: 4.0
+Nombre: Russell , Natalie, Media: 4.0
+Nombre: Subiri Rueda, Fco José, Media: 2.0
+Nombre: Vilches Moreno, Lola Isabel, Media: 8.0
+Nombre: Virella Robles, Carolina, Media: 4.0
+Nombre: Aguilera Delgado, Enrique, Media: 7.0
+Nombre: Benítez Gaitán, Juan Cruz, Media: 5.0
+Nombre: Cruz Pino, Raquel, Media: 4.0
+Nombre: Domínguez Tirado, José, Media: 6.0
+Nombre: Donaire Rodríguez, Miguel Ángel, Media: 5.0
+Nombre: Donaire Vergara, Eva María, Media: 5.0
+Nombre: Durán , Mariano, Media: 4.0
+Nombre: El Mazani , Mohammed, Media: 4.0
+Nombre: Garrido Delgado, Pablo, Media: 4.0
+Nombre: González Solano, Ana Belén, Media: 1.0
+Nombre: Guerra Cano, Tamara, Media: 2.0
+Nombre: Hurtado García, Carmen María, Media: 4.0
+Nombre: Lima Franco, Laura, Media: 3.0
+Nombre: Luque González, Christian, Media: 7.0
+Nombre: Martínez Calderero, Aarón, Media: 4.0
+Nombre: Morales Flores, Víctor, Media: 1.0
+Nombre: Peula Cordero, Yazmina, Media: 5.0
+Nombre: Ramírez Farfán, Carmen, Media: 5.0
+Nombre: Requena Carrasco, Rafael, Media: 3.0
+Nombre: Robles Ortiz, Sofía, Media: 5.0
+Nombre: Rueda Calzada, Laura, Media: 7.0
+Nombre: Salas Márquez, Jennifer, Media: 2.0
+Nombre: Sánchez Ortiz, Álvaro José, Media: 6.0
+Nombre: Aranda Vázquez, José, Media: 2.0
+Nombre: Castillo Alcázar, Alejandro, Media: 4.0
+Nombre: Cordón López, Rocío, Media: 2.0
+Nombre: Mantero González, Juan, Media: 4.0
+Nombre: Martín Soler, José Manuel, Media: 3.0
+Nombre: Menaique Álvarez, Celia María, Media: 4.0
+Nombre: Mora Castillo, Paola, Media: 4.0
+Nombre: Ramírez Pérez, David, Media: 3.0
+Nombre: Recchia , María Fiorella, Media: 3.0
+Nombre: Rendón Alba, Jorge Luis, Media: 2.0
+Nombre: Roberto Jaimes, Neila Fernanda, Media: 4.0
+Nombre: Rueda Vega, Ana Carmen, Media: 4.0
+Nombre: Ruiz Rueda, Sebastián, Media: 3.0
+Nombre: Vegas Carrasco, María Encarnación, Media: 2.0
+Nombre: Villar Risco, Omar, Media: 7.0
+Nombre: Villatoro Postigo, Adrián, Media: 4.0
+Nombre: Wilson , Luke, Media: 2.0
+Nombre: Benítez Maya, Luciana, Media: 6.0
+Nombre: Castillo Viñolo, Francisco, Media: 3.0
+Nombre: Fontaneda Macías, Borja, Media: 6.0
+Nombre: García Bernal, María Esther, Media: 7.0
+Nombre: García López, Elena, Media: 6.0
+Nombre: García Romero, Álvaro, Media: 4.0
+Nombre: García Sánchez, Carmen, Media: 3.0
+Nombre: González Bernal, Cristóbal, Media: 5.0
+Nombre: Hernández Jack, Irene, Media: 5.0
+Nombre: Jalao Puertas, Jonathan, Media: 1.0
+Nombre: López Muro, Rosario, Media: 3.0
+Nombre: López Muro, Rosario, Media: 3.0
+Nombre: Mayer Jiménez, Alejandro, Media: 1.0
+Nombre: Molina González, Samuel Oliver, Media: 3.0
+Nombre: Navarro García, María Azahara, Media: 4.0
+Nombre: Núñez Ramírez, Paula, Media: 3.0
+Nombre: Oïbrien , George Iván, Media: 1.0
+Nombre: Reina Romero, José Daniel, Media: 6.0
+Nombre: Sales Briales, Paloma, Media: 3.0
+Nombre: Solano Fernández, Alejandro David, Media: 1.0
+Nombre: Sánchez López, Alba, Media: 3.0
+Nombre: Vargas Santiago, Samuel, Media: 1.0
+Nombre: Álvarez Rodríguez, Dayana Vanessa, Media: 5.0
+Nombre: Abdeselam Blanco, Hillary, Media: 6.0
+Nombre: Amaya Guillén, José Pablo, Media: 5.0
+Nombre: Artacho Silva, Mar, Media: 6.0
+Nombre: Becerra García, Javier, Media: 5.0
+Nombre: Ben Aouda , Mounir, Media: 1.0
+Nombre: Benítez Berenjeno, Laura, Media: 7.0
+Nombre: Bernat Rodríguez, Sandra, Media: 5.0
+Nombre: Bravo Guzmán, Mireya, Media: 4.0
+Nombre: Cañas Arcos, Esther, Media: 6.0
+Nombre: Cecilio Gibaja, Sara, Media: 3.0
+Nombre: Delgado Rodríguez, Daniel, Media: 6.0
+Nombre: Farfán González, María de la Paloma, Media: 5.0
+Nombre: Moreno Santamaría, José Luis, Media: 3.0
+Nombre: Moreno Vázquez, Tomás, Media: 6.0
+Nombre: Muñoz Bellido, Sandra, Media: 2.0
+Nombre: Perea Sierra, Antonio Mateo, Media: 4.0
+Nombre: Plaza Pérez, Nuria María, Media: 5.0
+Nombre: Postigo Vázquez, Salvador, Media: 4.0
+Nombre: Prieto Granja, Alicia, Media: 3.0
+Nombre: Puertas Moreno, Andrea, Media: 5.0
+Nombre: Rico Pinazo, Pedro, Media: 8.0
+Nombre: Rodríguez Baro, Irene, Media: 5.0
+Nombre: Rodríguez Horcajo, Noelia, Media: 7.0
+Nombre: Rodríguez Márquez, Ezequiel, Media: 7.0
+Nombre: Romero González, Nazaret, Media: 5.0
+Nombre: Rueda Blanco, Oscar, Media: 7.0
+Nombre: Serrano Doña, Ismael, Media: 7.0
+Nombre: Solano Garrido, Alberto, Media: 3.0
+Nombre: Solera Benítez, Paola, Media: 5.0
+Nombre: Sánchez Solano, Ana Tadea, Media: 7.0
+Nombre: Vega Jiménez, Ana María, Media: 5.0

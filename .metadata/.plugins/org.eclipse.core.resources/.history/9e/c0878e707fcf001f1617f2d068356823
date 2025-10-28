@@ -1,0 +1,18 @@
+package ejercicio3;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Rectangulo rectangulo1 = new Rectangulo();
+		
+		rectangulo1.x1= 0;
+		rectangulo1.y1=0;
+		rectangulo1.x2=5;
+		rectangulo1.y2=5;
+		
+		System.out.print(rectangulo1);
+		
+	}
+
+}

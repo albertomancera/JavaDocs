@@ -1,0 +1,16 @@
+package ejercicio2;
+
+import java.util.*;
+
+public class Ejercicio2 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+	
+		String nombre = entradaTeclado.nextLine();
+		System.out.println("Dime tu nombre: ");
+		
+		int edad = entradaTeclado.nextInt();
+		System.out.println("Dime tu edad: ");
+		
+	}
+}

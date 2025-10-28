@@ -1,0 +1,87 @@
+package mobiliario;
+
+public final class  Silla extends Asiento implements Ajustable {
+	public static final int MIN_POSICION = 1;
+	public static final int MAX_POSICION = 4;
+
+
+	private int posicionRespaldo;
+
+
+	public Silla(double precio, String descripcion, String tapiceria, String color) throws IllegalArgumentException {
+		super(precio, descripcion, Asiento.MIN_PLAZAS, tapiceria, color);
+		this.posicionRespaldo = MIN_POSICION;
+	}
+	
+	
+	
+	public Silla(int posicionRespaldo) throws IllegalArgumentException {
+		this(posicionRespaldo, DESCRIPCION_DEFECTO, TAPICERIA_DEFECTO, COLOR_DEFECTO);
+		if(posicionRespaldo < MIN_POSICION || posicionRespaldo > MAX_POSICION) {
+			throw new IllegalArgumentException("La posicion "+ posicionRespaldo + " no está en el rango premitido");
+		}
+	}
+
+
+
+	public int getPosicionRespaldo() {
+		return posicionRespaldo;
+	}
+
+	@Override
+	public int obtenerPosicion() {
+		return getPosicionRespaldo();
+	}
+
+	@Override
+	public int subirPosicion() throws IllegalStateException {
+		int nuevaPosicion = getPosicionRespaldo() + 1;
+		if(nuevaPosicion > MAX_POSICION) {
+			throw new IllegalStateException("Error: no se puede subir a la posición "+ nuevaPosicion + " , ya que la posición máxima es  "+ MAX_POSICION);
+		}
+		this.posicionRespaldo = nuevaPosicion;
+		return this.posicionRespaldo;
+	}
+
+	@Override
+	public int bajarPosicion() throws IllegalStateException {
+		int nuevaPosicion = getPosicionRespaldo() - 1;
+		if(nuevaPosicion < MIN_POSICION) {
+			throw new IllegalStateException("Error: no se puede bajar a la posicion "+ nuevaPosicion + " , ya que la posición minima es "+ MIN_POSICION);
+		}
+		this.posicionRespaldo = nuevaPosicion;
+		return this.posicionRespaldo;
+	}
+
+	@Override
+	public int subirDosPosiciones() throws IllegalStateException {
+		int nuevaPosicion = getPosicionRespaldo() + 2;
+		if(nuevaPosicion > MAX_POSICION) {
+			throw new IllegalStateException("Error: no se puede subir a la posición "+ nuevaPosicion + " , ya que la posición máxima es  "+ MAX_POSICION);
+		}
+		this.posicionRespaldo = nuevaPosicion;
+		return this.posicionRespaldo;
+	}
+
+	@Override
+	public int bajarDosPosiciones() throws IllegalStateException {
+		int nuevaPosicion = getPosicionRespaldo() - 2;
+		if(nuevaPosicion < MIN_POSICION) {
+			throw new IllegalStateException("Error: no se puede bajar a la posicion "+ nuevaPosicion + " , ya que la posición minima es "+ MIN_POSICION);
+		}
+		this.posicionRespaldo = nuevaPosicion;
+		return this.posicionRespaldo;
+	}
+	
+
+	@Override
+	public String toString() {
+		return super.toString() +  " Posicion Respaldo: " + getPosicionRespaldo() ;
+	}
+
+	
+
+
+	
+	
+}

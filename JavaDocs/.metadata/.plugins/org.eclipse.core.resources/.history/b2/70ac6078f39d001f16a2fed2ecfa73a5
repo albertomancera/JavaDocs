@@ -1,0 +1,24 @@
+package metodos;
+import java.util.Scanner;
+
+public class Ejemplo2 {
+	public static void main(String[] args) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		int num;
+		
+		System.out.println("Dime números enteros: ");
+		num = entradaTeclado.nextInt();
+		
+		if (num == multiplo(num)) {
+			System.out.println("Este número es multiplo de 5");
+		}
+	}
+	//Comprobar si es multiplo de 5
+	public static int multiplo (int total) {
+		total = 0; 
+	        for (int i=1; i<1000; ++i) {
+	            if (i%5 == 0) { total += i; } 
+	        }
+	        return total;
+	}
+}

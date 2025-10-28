@@ -1,0 +1,27 @@
+package examen;
+
+import java.time.LocalDate;
+
+public class Yates extends Embarcacion{
+	//Atributos de Objeto
+	private String tipo_yate;
+	
+	
+
+	public Yates(String matricula, LocalDate fecha_construccion, int eslora, int num_pasajeros, boolean base_puerto
+			) throws IllegalArgumentException {
+		super(matricula, fecha_construccion, eslora, num_pasajeros, base_puerto);
+		if(eslora >= 10 && eslora <=24) {
+		this.tipo_yate = "Yate";
+		}else if (eslora > 24 && eslora <=40) {
+		this.tipo_yate = "Yate Grande";
+		}else if(eslora> 40 && eslora <=60) {
+			this.tipo_yate = "Súper Yate";
+		}else if(eslora > 60) {
+			this.tipo_yate = "Mega Yate";
+		}
+	}
+	
+	
+	
+}

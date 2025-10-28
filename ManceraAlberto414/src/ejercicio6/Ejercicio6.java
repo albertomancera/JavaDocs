@@ -1,0 +1,22 @@
+package ejercicio6;
+import java.util.Scanner;
+
+public class Ejercicio6 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		double precio;
+		for(int i=0;i<5;i++) {
+			System.out.println("Dime un precio: ");
+			precio= sc.nextDouble();
+			System.out.println("El precio tras aplicarle el IVA es : "+ precioConIVA(precio));
+		}
+		
+	}
+	 // Devuelve el precio tras sumarle un 21% de IVA
+		public static double precioConIVA(double precio) {
+			double iva;
+			 iva = precio*1.21;
+			 return iva;
+		}
+}

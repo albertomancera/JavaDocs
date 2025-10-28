@@ -1,0 +1,81 @@
+package operArrayList;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class PrincipalArrayList {
+
+	public static void main(String[] args) {
+		ArrayList<Estudiante> lista;
+		File f = new File("notas1.txt");
+		System.out.println("Importa la información contenida en el documento notas1.txt");
+		System.out.println("--------------------------------------------");
+		lista = importarDatos(f);
+		
+		System.out.println("2. Muestra el número de registros que contiene.");
+		System.out.println("-----------------------------------------");
+		System.out.println("Número de registros: "+ lista.size());
+		
+		System.out.println("3. Ordena los registros por grupo y nombre.");
+		System.out.println("-----------------------------------------");
+		Collections.sort(lista, Comparator.comparing(Estudiante::getGrupo)
+	            .thenComparing(Estudiante::getNombre));
+		
+		System.out.println("4. Inserta siguiente registro:");
+		System.out.println("-----------------------------------------");
+		Estudiante est1 = new Estudiante("1º ESO D","López Muro, Rosario",3,3,4,4,3);
+		lista.add(est1);
+		System.out.println("Número de registros: "+ lista.size());
+		
+		System.out.println("5. Inserta siguiente registro en mitad de la lista:");
+		System.out.println("-----------------------------------------");
+		Estudiante est2 = new Estudiante("1º ESO B","Duarte Durán, Alba", 2,3,4,1,3);
+		lista.add(lista.size()/2, est2);
+		
+		System.out.println("6. Posición del nuevo registro: "+ lista.indexOf(est2));
+		
+		System.out.println("7. Importa los registros del documento notas2.txt a un ArraList auxiliar e incluye los elementos\r\n"
+				+ "de este ArrayList auxiliar al primer ArrayList.");
+		ArrayList<Estudiante>lista2;
+		File f1 = new File("notas2.txt");
+		System.out.println("Total registros antes de añadir: "+ lista.size());
+		lista2 = importarDatos(f1);
+		System.out.println("Total registros de la lista auxiliar: "+ lista2.size());
+		lista.addAll(lista2);
+		System.out.println("Total registros después de añadir: "+ lista.size());
+		
+		
+	}
+
+	private static ArrayList<Estudiante> importarDatos(File f) {
+		ArrayList<Estudiante> e1 = new ArrayList<>();
+		
+		try {
+			Scanner lector = new Scanner(f);
+		
+			while(lector.hasNext()) {
+				String linea = lector.nextLine();
+				String [] partes = linea.split(";");
+				String grupo = partes[0];
+				String nombre = partes[1];
+				int matematicas = Integer.parseInt(partes[2]);
+				int lengua = Integer.parseInt(partes[3]);
+				int fisica = Integer.parseInt(partes[4]);
+				int quimica = Integer.parseInt(partes[5]);
+				int ingles = Integer.parseInt(partes[6]);
+				
+				Estudiante estudiante = new Estudiante(grupo,nombre,matematicas,lengua,fisica,quimica,ingles);
+				e1.add(estudiante);
+			}
+			lector.close();
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return e1;
+	}
+}

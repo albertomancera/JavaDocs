@@ -1,0 +1,23 @@
+package ejercicio8;
+import java.util.*;
+
+public class Ejercicio8 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		int num ;
+		int contador=0;
+		int positivo;
+		int negativo;
+		
+		do {
+			System.out.println("Dime un número entero: ");
+			num = entradaTeclado.nextInt();
+		}while(num==0);
+		
+	
+			
+			
+		
+	}
+}

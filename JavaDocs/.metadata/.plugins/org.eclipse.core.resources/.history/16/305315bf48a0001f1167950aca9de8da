@@ -1,0 +1,63 @@
+package metodos;
+
+import java.util.Scanner;
+
+public class MetodosFunciones {
+
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		double a, b ;
+		String operador, nombre;
+		
+		System.out.println("Dime un número: ");
+		a=sc.nextDouble();
+		
+		System.out.println("Dime un nombre: ");
+		nombre=sc.nextLine();
+		
+	/*	System.out.println("Dime otro número: ");
+		b=sc.nextDouble();
+		
+		System.out.println("Dime un operador para calcular los operandos "+a+" y "+b+" : ");
+		operador =sc.nextLine();
+		
+		System.out.println("El resultado es: "+operacion(a,b,operador));
+		*/
+		
+	
+	}
+		//Indica la operacion
+		public static double operacion (double a, double b, String operador) {
+			double resultado=0;
+			switch (operador) {
+			case "+":
+				resultado= a + b;
+			break;
+			case "-":
+				resultado= a - b;
+			break;
+			case "*":
+				resultado= a*b;
+			break;
+			case "/":
+				resultado= a / b;
+			break;
+			case "%":
+				resultado =a % b ;
+			break;
+			default:
+				System.out.println("Valor introducido incorrecto");
+					}
+			return (resultado);
+		}
+		//Devuelve el valor del parametro más 10
+		public static int masDiez (int valor) {
+			return valor+10;
+		}
+		//Devuelve el nombre más la palabra adiós
+		public static String nombreMasAdios (String nombre) {
+			
+			return nombre + "adios";
+		}
+	
+}

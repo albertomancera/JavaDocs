@@ -1,0 +1,25 @@
+package ejercicio8;
+import java.util.*;
+
+public class Ejercicio8 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		String nombre;
+		System.out.println("Dime tu nombre: ");
+		nombre= entradaTeclado.nextLine();
+		
+		String apellidos;
+		System.out.println("Dime tus apelidos: ");
+		apellidos = entradaTeclado.nextLine();
+		
+		int edad;
+		System.out.println("Dime tu edad: ");
+		edad = entradaTeclado.nextInt();
+		
+		int numrutas;
+		System.out.println("Dime tu número de rutas realizadas:");
+		numrutas = entradaTeclado.nextInt();
+		
+	}
+}

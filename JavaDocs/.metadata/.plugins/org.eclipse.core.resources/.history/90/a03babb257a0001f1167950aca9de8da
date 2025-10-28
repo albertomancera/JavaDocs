@@ -1,0 +1,15 @@
+package ejercicio4;
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+
+		int num1;
+	}
+	// Devuelve -1 si es negativo, 0 si es igual a 0, 1 si es positivo
+	public static int dimeSigno(int mum1) {
+		
+	}
+
+}

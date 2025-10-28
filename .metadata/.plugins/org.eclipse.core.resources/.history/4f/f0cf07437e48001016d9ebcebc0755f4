@@ -1,0 +1,51 @@
+package examenT1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int opcion;
+		
+		do {
+			System.out.println("------MENÚ-------");
+			System.out.println("(0)Salir");
+			System.out.println("(1)Multiplicar");
+			System.out.println("(2) Calcular media");
+			System.out.println("(3) Calcular el menor");
+			System.out.println("Elige una opcion: ");
+			opcion = sc.nextInt();
+		
+			if(opcion == 0) {
+				System.out.println("Saliendo del programa");
+			}else if(opcion == 1 || opcion == 2 || opcion ==3) {
+				System.out.println("Introduce 4 números enteros: ");
+				int n1 = sc.nextInt();
+				int n2 = sc.nextInt();
+				int n3 = sc.nextInt();
+				int n4 = sc.nextInt();
+				
+				switch(opcion) {
+				case 1:
+					int producto = multiplicar(n1,n2,n3,n4);
+					System.out.println("El resultado de la multiplicacion es: " + producto);
+					break;
+				case 2:
+					double media = calcularMedia(n1,n2,n3,n4);
+				}
+			}
+		
+		}while(opcion != 0);
+		
+		
+		
+		
+		
+	}
+	
+	public static int multiplicar(int a, int b , int c, int d) {
+		return a * b* c * d;
+	}
+
+}

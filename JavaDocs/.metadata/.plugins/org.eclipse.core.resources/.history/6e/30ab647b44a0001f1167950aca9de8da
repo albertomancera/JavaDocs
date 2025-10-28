@@ -1,0 +1,25 @@
+package metodos;
+
+import java.util.Scanner;
+
+public class MetodosFunciones {
+
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		double a, b;
+		a = 10;
+		b=25;
+		String operador="";
+		
+		
+		
+	}
+		
+		public static double operacion (double a, double b, String operador) {
+			return switch (operador) {
+			
+			
+			}
+	}
+	
+}

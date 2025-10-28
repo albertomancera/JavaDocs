@@ -1,0 +1,47 @@
+package examenT1;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int num1, num2;
+		
+		System.out.println("===CALCULO DE MULTIPLOS===");
+		
+		do {
+			System.out.println("Introduce un numero (1 a 50), usa el 0 para salir: ");
+			num1 = sc.nextInt();
+			
+			System.out.println("Introduce otro número (1 a 50), usa el 0 para salir: ");
+			num2 = sc.nextInt();
+			
+		
+			if(num1 == 0 || num2 == 0) {
+				System.out.println("Saliendo del programa ...");
+			}
+			
+			if(num1 < 1 || num1 > 50 || num2 < 1 || num2 > 50) {
+				System.out.println("Error: ambos numeros deben de estar entre el 1 y el 50");
+			}
+			
+			//Mostrar múltiplos del primer número
+			System.out.println("Primeros 5 multiplos de " + num1 + ":");
+			for(int i = 0; i <= 5; i++) {
+				System.out.println((num1 * i) + " ");
+			}
+			
+
+			//Mostrar múltiplos del segundo número
+			System.out.println("Primeros 5 multiplos de " + num2 + ":");
+			for(int i = 0; i <= 5; i++) {
+				System.out.println((num2 * i) + " ");
+			}
+			
+			System.out.println();
+		}
+	}
+
+}

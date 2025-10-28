@@ -1,0 +1,34 @@
+package examenT1;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int opcion;
+		
+		do {
+			System.out.println("------MENÚ-------");
+			System.out.println("(0)Salir");
+			System.out.println("(1)Multiplicar");
+			System.out.println("(2) Calcular media");
+			System.out.println("(3) Calcular el menor");
+			System.out.println("Elige una opcion: ");
+			opcion = sc.nextInt();
+		
+			if(opcion == 0) {
+				System.out.println("Saliendo del programa");
+			}else if(opcion == 1 || opcion == 2 || opcion ==3) {
+				
+			}
+		
+		}while(opcion != 0);
+		
+		
+		
+		
+		
+	}
+
+}

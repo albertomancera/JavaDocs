@@ -1,0 +1,48 @@
+/*
+ * Objetivo: Almacenar y mostrar datos de un array 
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio10;
+import java.util.*;
+
+public class Ejercicio10 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+	int n = entradaTeclado.nextInt();
+	double  media = 0,max, min;
+	int contadormax = 0, contadormin = 0;
+	
+	double altura[]=new double[n];
+	for (int i=0; i <n;i++) {
+		altura[i]=entradaTeclado.nextDouble();
+		media =altura[i]/n;
+	}
+	max= altura[0]; min=altura[0];
+	for (int i=0; i<altura.length; i++) {
+		if(altura[i]>max) {
+			max=altura[i];
+		}else {
+			if(altura[i]<min) {
+				min=altura[i];
+			}else {
+				if(media<altura[i]) {
+					contadormin++;
+				}else {
+					if(media>altura[i]) {
+						contadormax++;
+					}
+				}
+				}
+	}
+	}
+	System.out.println("La altura media es: "+media);
+	System.out.println("La altura máxima es: "+max);
+	System.out.println("La altura mínima es: "+min);
+	System.out.println("Por debajo de la media miden: "+contadormin+" personas");
+	System.out.println("Por encima de la media miden: "+contadormax+" personas");
+}
+}
+	
+

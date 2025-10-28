@@ -1,0 +1,20 @@
+package ejercicio4;
+import java.util.*;
+
+public class Ejercicio4 {
+	public static void main(String args[]) {
+		Scanner entradaTeclado = new Scanner(System.in);
+	
+		int alumnos=4, asignatura=5;
+		
+		int notas[][]= new int [alumnos][asignatura];
+		String nombre[]= {"Alumno1", "Alumno2", "Alumno3","Alumno4"};
+		
+		for (int i=0; i<alumnos;i++) {
+			for (int j=0; j<asignatura; j++) {
+				System.out.println("Dime tus notas: "+ notas[i][j]);
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,49 @@
+package estructurasimple;
+
+public class Ejemplo2 {
+	public static void main(String args[]) {
+		
+		 int numeroAciertos = 17;
+	        int numeroErrores = 3;
+	        int numeroPreguntas = 20;
+	       int nota = 0;
+	        int notaEntera = 0;
+	        String calificacion="";
+	        
+	        nota = ((numeroAciertos - (numeroErrores/2f))*10f)/numeroPreguntas;
+	        
+	     
+	        notaEntera=nota; 
+	       
+	        switch (notaEntera) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                calificacion = "INSUFICIENTE"; 
+                break;		
+            case 5:
+                calificacion = "SUFICIENTE"; 
+		break;
+            case 6:
+		calificacion = "BIEN";
+		break;
+            case 7:
+            case 8:
+                calificacion = "NOTABLE"; 
+		break;
+            case 9: 
+            case 10:
+		calificacion = "SOBRESALIENTE"; 
+		break;
+            default:
+                System.out.println("Se ha introducido una nota errónea");
+		calificacion = "CALIFICACIÓN FUERA DE RANGO";
+		
+		 System.out.println ("La nota obtenida es: " + nota);
+	        System.out.println ("Y la calificación obtenida es: " + calificacion);
+		
+	}
+	}
+}

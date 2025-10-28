@@ -1,0 +1,15 @@
+package objetos;
+
+import java.awt.Rectangle;
+
+public class Objetos {
+
+	public static void main(String[] args) {
+		
+		Rectangle rectangulo1;//Declaro el objeto
+		
+		rectangulo1 = new Rectangle();
+
+	}
+
+}

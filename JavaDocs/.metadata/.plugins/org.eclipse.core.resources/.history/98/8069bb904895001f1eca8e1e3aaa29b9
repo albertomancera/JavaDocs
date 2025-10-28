@@ -1,0 +1,10 @@
+/*
+ * Objetivo: Almacenar y mostrar datos de un array (maximo y minimo)
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+ */
+package ejercicio3;
+
+public class Ejercicio3 {
+
+}

@@ -1,0 +1,18 @@
+package ejercicio13;
+import java.util.Scanner;
+
+public class Ejercicio13 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		
+		double cantsin,canticon;
+
+	}
+	//
+	public static double descuento(double cantsin, double canticon) {
+		int porcentaje;
+		
+		return porcentaje;
+	}
+
+}

@@ -1,0 +1,45 @@
+package examen;
+
+import java.io.File;
+
+public class PrincipalExamen {
+
+	public static void main(String[] args) {
+		/*1. Importa desde documentos de texto (diseñados por ti)
+		al menos tres embarcaciones de cada tipo.*/
+		
+		
+		//2. Genera 10 veleros con valores por defecto con fecha de construcción cuyo año sea un
+		//valor aleatorio entre 2000 y 2050.
+		Velero[] veleros = new Velero[10];
+		for(int i = 0; i<veleros.length; i++) {
+			try {
+				veleros[i] = new Velero(Embarcacion.MATRICULA_DEFECTO,Embarcacion.FECHA_ACTUAL,Embarcacion.ESLORA_DEFECTO,
+						Embarcacion.NUM_PASAJEROS_DEFECTO,Embarcacion.BASE_PUERTO_DEFECTO,Velero.NUM_MASTILES_DEFECTO );
+				System.out.println(veleros[i]);
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	
+	
+	//33. Genera 10 yates con valores por defecto cuya eslora sea un valor aleatorio entre 10 y 80
+	Yates[] yates = new Yates[10];
+	for(int i = 0; i<yates.length; i++) {
+		try {
+			yates[i] = new Yates(Embarcacion.MATRICULA_DEFECTO,Embarcacion.FECHA_ACTUAL,obtenerNumeroAleatorio(),
+					Embarcacion.NUM_PASAJEROS_DEFECTO,Embarcacion.BASE_PUERTO_DEFECTO);
+			System.out.println(yates[i]);
+	}catch(IllegalArgumentException e) {
+		System.out.println(e.getMessage());
+	}
+	}
+	}
+	public static int obtenerNumeroAleatorio() {
+		 int min = 10;
+	        int max = 80;
+	        int numeroAleatorio = (int) (Math.random() * (max - min + 1)) + min;
+		return numeroAleatorio;
+    }
+}
+

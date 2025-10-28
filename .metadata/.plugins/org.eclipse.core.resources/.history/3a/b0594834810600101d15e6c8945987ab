@@ -1,0 +1,65 @@
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public class PrincipalVehiculo {
+
+	public static void main(String[] args) {
+
+	    //1. Crea un coche con los siguientes datos: 1212ABC, Fiesta, 01/01/2010, 4, AA (sí).
+	    //    Evidencia: mostrar todos los datos del objeto.
+		System.out.println("--- 1 ---");
+		Vehiculo coche1 = new Coche ("1212ABC", "Fiesta",LocalDate.of(2010, 01, 01),4,true);
+		System.out.println(coche1.toString());
+	    //2. Calcula el precio de 5 días.
+	    //    Evidencia: mostrar el precio.
+		System.out.println("--- 2 ---");
+		
+		
+	    //3. Crea una moto con los siguientes datos: 1234ABC, Vespa, 01/01/2015, 2, Blanco.
+	    //    Evidencia: mostrar todos los datos del objeto.
+		System.out.println("--- 3 ---");
+		Vehiculo moto1 = new Moto ("1234ABC", "Vespa", LocalDate.of(2015, 01, 01), 2, "Blanco");
+		System.out.println(moto1.toString());
+	    //4. Crea un barco con los siguientes datos: AAQQ, Mistral, 01/01/2000, 20, Motor (sí).
+	    //    Evidencia: mostrar todos los datos del objeto.
+		System.out.println("--- 4 ---");
+		Vehiculo barco1 = new Barco ("AAQQ", "Mistral", LocalDate.of(2000, 01, 01), 20, true);
+		System.out.println(barco1.toString());
+	    //5. Calcula el precio de 5 días.
+	    //    Evidencia: mostrar el precio.
+		System.out.println("--- 5 ---");
+		
+		
+	    //6. Crea un submarino con los siguientes datos: WQASDEF, BV100, 10, 30.
+	    //    Evidencia: mostrar todos los datos del objeto.
+		System.out.println("--- 6 ---");
+		try {
+		//Vehiculo submarino1 = new Submarino("WQASDEF", "BV100", 10, 30); //Le falta la fecha de fabricacion
+		}catch (IllegalArgumentException e) {
+            System.out.println("Error al crear v1: " + e.getMessage());
+        }
+
+			
+		
+	    //7. Crea un avión con valores por defecto.
+	    //    Evidencia: mostrar todos los datos del objeto.
+		System.out.println("--- 7 ---");
+		Vehiculo avion1 = new Avion();
+		System.out.println(avion1.toString());
+		
+	    //8. Calcula el precio de 5 días.
+	    //    Evidencia: mostrar el precio.
+		System.out.println("--- 8 ---");
+		
+		
+		//9. Crea un helicóptero con valores por defecto.
+	    //    Evidencia: mostrar todos los datos del objeto.
+		System.out.println("--- 9 ---");
+		Vehiculo helicoptero1 = new Helicoptero();
+		System.out.println(helicoptero1.toString());
+
+
+	}
+
+}

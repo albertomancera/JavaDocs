@@ -1,0 +1,22 @@
+package bucles;
+
+public class Bucles {
+	public static void main(String[] args) {
+	/*
+	 * Bucles indeterminados: no sabemos cuantas lineas vamos a hacer
+	 * 	-While ( mientras)
+	 * 		
+	 * 		
+	 * 	-Do-while
+	 * Bucles determinados: sabemos cuantas veces los vamos a hacer
+	 */
+	
+		String clave="Juan";
+		String pass="";
+		
+		while(clave==pass) {
+		System.out.println("Vuelve a intentarlo");
+		}
+		System.out.println("Perfecto, has terminado el proceso");
+	}
+}

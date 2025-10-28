@@ -1,0 +1,24 @@
+package examenT1parcial;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int hora,minutos;
+		String nombre;
+		
+		System.out.println("Introduce tu nombre: ");
+		nombre = sc.nextLine();
+		
+		do {
+			System.out.println("Introduce la hora: (0-24): ");
+			hora = sc.nextInt();
+		}while(hora < 0 || hora > 24);
+		
+		
+	}
+
+}

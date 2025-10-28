@@ -1,0 +1,10 @@
+ /*
+Objetivo: Almacenar y mostrar datos de un array (suma de positivos y negativos)
+ * Autor: Alberto Mancera Plaza
+ * Fecha: 28/10/2024
+  */
+package ejercicio4;
+
+public class Ejercicio4 {
+
+}

@@ -1,0 +1,43 @@
+package metodos;
+
+import java.util.Scanner;
+
+public class MetodosFunciones {
+
+	public static void main(String[] args) {
+		Scanner sc  = new Scanner (System.in);
+		double a, b;
+		a = 10;
+		b=25;
+		String operador="";
+		
+		
+		System.out.println(operacion(a+ "+"+ b));
+		
+	}
+		
+		public static double operacion (double a, double b, String operador) {
+			double resultado;
+			switch (operador) {
+			case "+":
+				a + b=resultado;
+			break;
+			case "-":
+				a - b=resultado;
+			break;
+			case "*":
+				a*b=resultado;
+			break;
+			case "/":
+				a/b=resultado;
+			break;
+			case "%":
+				a%b = resultado;
+			break;
+			default:
+				System.out.println("Valor introducido incorrecto");
+					}
+			return resultado;
+		}
+	
+}

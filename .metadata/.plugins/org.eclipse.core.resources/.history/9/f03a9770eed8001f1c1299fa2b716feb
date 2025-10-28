@@ -1,0 +1,10 @@
+package ejercicio2;
+
+public class Persona {
+
+	private String dni;
+	String nombre;
+	String apellidos;
+	int edad;
+	
+}

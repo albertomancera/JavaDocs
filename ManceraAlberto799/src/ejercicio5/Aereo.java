@@ -1,0 +1,40 @@
+
+package ejercicio5;
+
+import java.time.LocalDate;
+
+public abstract class Aereo extends Vehiculo {
+	
+	public static String MATRICULA_DEFECTO = "AEIO123456";
+	public static String MODELO_DEFECTO = "ASUS";
+	public static LocalDate FECHA_FABRICACION_DEFECTO = LocalDate.of(2000,01,01);
+	public static int ASIENTOS_DEFECTO = 10;
+	
+    protected final int asientos;
+
+	public Aereo(String matricula, String modelo, LocalDate fechaFabricacion, int asientos)throws IllegalArgumentException {
+		super(matricula, modelo, fechaFabricacion);
+		if(!matricula.matches("[A-Za-z]{4}[0-9]{6}")) {
+			throw new IllegalArgumentException("El formato de la matricula tiene que ser 9999 AAAA");
+		}
+		if(matricula == null || matricula.isEmpty()) {
+			throw new IllegalArgumentException("La matricula no puede estar vacía");
+		}
+		this.asientos = asientos;
+	}
+	
+	public Aereo() {
+		this(MATRICULA_DEFECTO, MODELO_DEFECTO, FECHA_FABRICACION_DEFECTO, ASIENTOS_DEFECTO);
+	}
+
+	public void setMatricula(String matricula) throws IllegalArgumentException{
+		if(matricula.matches("[A-Za-z]{4}[0-9]{6}")) {
+			throw new IllegalArgumentException("El formato de la matricula tiene que ser 9999 AAAA");
+		}if(matricula == null || matricula.isEmpty()) {
+			throw new IllegalArgumentException("La matricula no puede estar vacía");
+		}
+		
+		this.matricula = matricula;
+	}
+  
+}

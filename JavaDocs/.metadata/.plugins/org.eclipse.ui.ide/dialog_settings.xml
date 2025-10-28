@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+		<section name="NewWizard.dialogBounds">
+		</section>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\DAW1\Documents\JavaDocs\ManceraAlberto828"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\MozoAlvaro726"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\GonzalezIsmaelMobiliario"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\ClaseVehiculo_LuisMiguelRodriguez"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\GonzalezIsmael621"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\atributos"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\actividad405"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\actividad404"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\actividad403"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\actividad402"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\ManceraAlbertoT1P1"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\ManceraAlberto_299"/>
+			<item value="C:\Users\alber\OneDrive\Documentos\JavaDocs\ManceraAlberto_299"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\postigoJoseManuel_399"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\RuedaCarlos399"/>
+			<item value="C:\Users\DAW1\Documents\JavaDocs\GomezAlvaro_399"/>
+			<item value="C:\Users\alber\OneDrive\Documentos\JavaDocs"/>
+			<item value="C:\Users\alber\OneDrive\Documentos\JavaDocs\ManceraAlbertoT1P1"/>
+		</list>
+		<section name="SmartImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="45"/>
+			<item key="DIALOG_Y_ORIGIN" value="104"/>
+			<item key="DIALOG_WIDTH" value="885"/>
+			<item key="DIALOG_HEIGHT" value="629"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+</section>

@@ -1,0 +1,46 @@
+package mobiliario;
+
+public abstract class Mueble {
+	public static final double MIN_PRECIO = 0.01;
+	public static final double MAX_PRECIO = 10000.00;
+	public static final double PRECIO_DEFECTO = 34;
+	public static final String DESCRIPCION_DEFECTO = "dESCRIPCION DEFECTO";
+
+	private static int contador = 1;
+	
+	protected int identificador;
+	protected double precio;
+	protected final String descripcion;
+	
+	public Mueble(double precio, String descripcion) throws IllegalArgumentException{
+		if(precio < MIN_PRECIO || precio > MAX_PRECIO) {
+			throw new IllegalArgumentException("El precio no está en el rango permitido: "+ precio);
+		}
+		
+		this.precio = precio;
+		this.descripcion = descripcion;
+		this.identificador = contador;
+		contador++;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public int getId() {
+		return identificador;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	@Override
+	public String toString() {
+		return "Tipo: " + this.getClass().getSimpleName() + " ID: " + this.getId() 
+		+ " Precio: " + this.getPrecio() + " Descripcion: " + this.getDescripcion();
+	}
+	
+	
+	
+}
